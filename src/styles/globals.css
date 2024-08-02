@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@layer base {
+  @font-face {
+    font-family: TaiymeEN;
+    font-weight: 100 500;
+    src: local("HelveticaNeue"), local("ArialMT");
+  }
+
+  @font-face {
+    font-family: TaiymeEN;
+    font-weight: 600 900;
+    src: local("HelveticaNeue-Bold"), local("Arial-BoldMT");
+  }
+
+  @font-face {
+    font-family: TaiymeCJK;
+    font-weight: 100 500;
+    src: local("HiraginoSans-W3"), local("HiraKakuProN-W3"), local("BIZ-UDPGothic"), local("Meiryo");
+  }
+
+  @font-face {
+    font-family: TaiymeCJK;
+    font-weight: 600 900;
+    src: local("HiraginoSans-W6"), local("HiraKakuProN-W6"), local("BIZ-UDPGothic-Bold"), local("Meiryo-Bold");
+  }
+}
