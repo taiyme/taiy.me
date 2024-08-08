@@ -67,7 +67,7 @@ export default function ProfileAvatar() {
           width={224}
           height={224}
           onLoad={onLoad}
-          loading='lazy'
+          loading='eager'
           className={clsx(`
             pointer-events-none
             size-full
