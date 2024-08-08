@@ -18,10 +18,10 @@ export const metadata = {
 export default function SpecialsDonatePage() {
   return (
     <article className='flex flex-col gap-8'>
-      <section className='space-y-3'>
+      <header className='space-y-3'>
         <h1 className='mb-4 text-2xl font-bold @xl/page:text-3xl'>taiyを支援する</h1>
         <p className='leading-relaxed'>taiy個人、または関連するプロジェクトを応援したい場合は、支援をご検討ください。</p>
-      </section>
+      </header>
       <section className='space-y-3'>
         <h2 className='text-lg font-bold @xl/page:text-xl'>送金する</h2>
         <div

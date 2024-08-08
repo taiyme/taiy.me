@@ -3,7 +3,7 @@ import { clsx } from '@/utils/clsx';
 
 export default function CommonSidebar() {
   return (
-    <aside
+    <header
       className={clsx(`
         sticky top-0
         row-span-2
@@ -26,6 +26,6 @@ export default function CommonSidebar() {
       >
         <Profile />
       </div>
-    </aside>
+    </header>
   );
 }

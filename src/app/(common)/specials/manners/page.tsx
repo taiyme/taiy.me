@@ -14,12 +14,12 @@ export const metadata = {
 export default function SpecialsMannersPage() {
   return (
     <article className='flex flex-col gap-8'>
-      <section className='space-y-3'>
+      <header className='space-y-3'>
         <h1 className='mb-4 text-2xl font-bold @xl/page:text-3xl'>Misskeyの利用マナー</h1>
         <p className='leading-relaxed'>随時更新します。</p>
         <p className='leading-relaxed'>この利用マナーは個人の意見に基づくものであり、実際には各サーバーの利用規約等が優先されます。</p>
         <p className='italic leading-relaxed'>免責: この利用マナーに基づいた投稿について、著者は一切責任を負いません。</p>
-      </section>
+      </header>
       <section className='space-y-3'>
         <h2 className='text-lg font-bold @xl/page:text-xl'>投稿内容について</h2>
         <p className='leading-relaxed'>MisskeyはActivityPubという規格に対応しており、それに対応しているサーバーと繋がることができます。</p>

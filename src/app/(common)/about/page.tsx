@@ -14,11 +14,11 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <article className='flex flex-col gap-8'>
-      <section className='space-y-3'>
+      <header className='space-y-3'>
         <h1 className='mb-4 text-2xl font-bold @xl/page:text-3xl'>taiyについて</h1>
         <p className='leading-relaxed'>音声作品と音ゲー、たまにプログラミング。</p>
         <p className='leading-relaxed'>taiyの正式な発音は「たいいー」です。<LinkText href='/specials/statement' aria-label='taiyの発音に関する公式声明を見る'>詳細はこちら</LinkText></p>
-      </section>
+      </header>
       <section className='space-y-3'>
         <h2 className='text-lg font-bold @xl/page:text-xl'>このサイトについて</h2>
         <p className='leading-relaxed'>taiy.meというドメインは2020年に取得していましたが、2024年になってようやくこのサイトを爆誕させることになりました。</p>
@@ -27,7 +27,8 @@ export default function AboutPage() {
       <section className='space-y-3'>
         <h2 className='text-lg font-bold @xl/page:text-xl'>音ゲーについて</h2>
         <p className='leading-relaxed'>最近は<LinkText href='https://wds-stellarium.com/game/'>ユメステ</LinkText>をプレイしています。2024年7月頃にプレイヤーレート1000を達成しました。</p>
-        <aside className='space-y-3'>
+        <aside>
+          <h3 className='sr-only'>余談</h3>
           <p className='leading-relaxed'>とりあえず『<LinkText href='https://www.youtube.com/watch?v=BVdrMRaxcdU'>不可逆的運命ディストピア</LinkText>』と『<LinkText href='https://www.youtube.com/watch?v=e_N_24PrPTU'>I Wanna</LinkText>』は神曲なので聴いてやってください。</p>
         </aside>
       </section>

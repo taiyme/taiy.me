@@ -14,10 +14,10 @@ export const metadata = {
 export default function PrivacyPage() {
   return (
     <article className='flex flex-col gap-8'>
-      <section className='space-y-3'>
+      <header className='space-y-3'>
         <h1 className='mb-4 text-2xl font-bold @xl/page:text-3xl'>プライバシーポリシー</h1>
         <p className='leading-relaxed'>taiy.me（以下「当サイト」といいます。）は、プライバシーの保護を最重視し、以下のとおりプライバシーポリシー（以下「本ポリシー」といいます。）を定め、その適切な取扱いに努めます。</p>
-      </section>
+      </header>
       <section className='space-y-3'>
         <h2 className='text-lg font-bold @xl/page:text-xl'>収集する情報と目的</h2>
         <p className='leading-relaxed'>当サイトは、個人のウェブサイトであり、訪問者の個人情報（ここでは「個人情報の保護に関する法律」第2条第1項で定義されるものを指します。以下同じ。）を収集することはありません。</p>
@@ -49,13 +49,13 @@ export default function PrivacyPage() {
         <h2 className='text-lg font-bold @xl/page:text-xl'>お問い合わせ</h2>
         <p className='leading-relaxed'>本ポリシーの内容に関するお問い合わせは、メール（<LinkEmail user='me' domain='taiy.me' />）までご連絡ください。</p>
       </section>
-      <section className='space-y-3'>
+      <footer className='space-y-3'>
         <div className='flex justify-end'>
           <ul>
             <li><time dateTime='2024-08-06T15:00:00.000Z'>2024年8月7日</time>策定</li>
           </ul>
         </div>
-      </section>
+      </footer>
     </article>
   );
 }

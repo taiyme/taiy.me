@@ -13,14 +13,13 @@ type ProfileProps = Readonly<{
 }>;
 
 export default function Profile({ inIndexPage = false }: ProfileProps) {
-  const DivOrH1 = inIndexPage ? 'h1' : 'div';
   const DivOrFooter = inIndexPage ? 'footer' : 'div';
 
   return (
     <div className='flex w-full flex-col items-center gap-6 @container/profile'>
       <ProfileAvatar />
       <div className='flex flex-col items-center gap-1'>
-        <DivOrH1 className='text-2xl font-bold @md/profile:text-3xl'>taiy</DivOrH1>
+        <h1 className='text-2xl font-bold @md/profile:text-3xl'>taiy</h1>
         <ProfileComment />
       </div>
       <div className='-my-2 flex gap-2'>
