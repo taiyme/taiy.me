@@ -3,19 +3,17 @@ import { Link } from 'next-view-transitions';
 
 import ParseURL from '@/components/ParseURL';
 import { clsx } from '@/utils/clsx';
-import { resolveUrl } from '@/utils/resolveUrl';
+import { generateAnchorProps, type LinkBaseProps } from '@/utils/generateAnchorProps';
 
-type LinkTextProps = Readonly<Pick<React.ComponentProps<typeof Link>, 'children' | 'href' | 'aria-label'>>;
+type LinkTextProps = LinkBaseProps;
 
-export default function LinkText({ children, href, ...props }: LinkTextProps) {
-  const { resolvedUrl, isExternalUrl } = resolveUrl(href);
+export default function LinkText({ children, href, sponsored, ...props }: LinkTextProps) {
+  const { anchorProps, resolvedUrl, isExternalUrl } = generateAnchorProps({ href, sponsored });
 
   return (
     <Link
       {...props}
-      href={href}
-      target={isExternalUrl ? '_blank' : undefined}
-      rel={isExternalUrl ? 'noopener noreferrer' : undefined}
+      {...anchorProps}
       className={clsx(`
         group/linkText
         rounded-[2px]

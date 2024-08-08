@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 
-import LinkCard from '@/components/LinkCard';
 import LinkEmail from '@/components/LinkEmail';
 import LinkText from '@/components/LinkText';
+import DonateCard from '@/features/DonateCard';
+import DonateLinkCard from '@/features/DonateLinkCard';
 import { clsx } from '@/utils/clsx';
 import { generateStaticMetadata } from '@/utils/generateStaticMetadata';
 
@@ -29,29 +30,29 @@ export default function SpecialsDonatePage() {
             @xs/page:grid-cols-[repeat(auto-fill,minmax(16rem,1fr))]
           `)}
         >
-          <LinkCard
-            cardLabel={(
+          <DonateCard
+            label={(
               <h3 className='inline font-bold'>Kyash</h3>
             )}
-            cardDescription={(
+            description={(
               <>
                 <p>Kyash ID: @taiy</p>
                 <p>taiyが普段利用しているのでおすすめです。</p>
               </>
             )}
-            cardTipType='recommended'
+            recommended
           />
-          <LinkCard
-            cardLabel={(
+          <DonateCard
+            label={(
               <h3 className='inline font-bold'>PayPay</h3>
             )}
-            cardDescription={(
+            description={(
               <>
                 <p>PayPay ID: @taiy</p>
                 <p>taiyが普段利用しているのでおすすめです。</p>
               </>
             )}
-            cardTipType='recommended'
+            recommended
           />
         </div>
       </section>
@@ -63,24 +64,24 @@ export default function SpecialsDonatePage() {
             @xs/page:grid-cols-[repeat(auto-fill,minmax(16rem,1fr))]
           `)}
         >
-          <LinkCard
+          <DonateLinkCard
             href='https://taiy.fanbox.cc/'
-            cardLabel={(
+            label={(
               <h3 className='inline font-bold'>pixivFANBOX</h3>
             )}
-            cardDescription={(
+            description={(
               <>
                 <p>毎月500円から支援できます。</p>
                 <p>※ メンバーシップの特典はありません。</p>
               </>
             )}
           />
-          <LinkCard
+          <DonateLinkCard
             href='https://www.patreon.com/taiy'
-            cardLabel={(
+            label={(
               <h3 className='inline font-bold'>Patreon</h3>
             )}
-            cardDescription={(
+            description={(
               <>
                 <p>毎月5ドルから支援できます。</p>
                 <p>※ メンバーシップの特典はありません。</p>
@@ -97,15 +98,15 @@ export default function SpecialsDonatePage() {
             @xs/page:grid-cols-[repeat(auto-fill,minmax(16rem,1fr))]
           `)}
         >
-          <LinkCard
+          <DonateLinkCard
             href='https://vivionblue.com/products/dld001p'
-            cardLabel={(
+            label={(
               <h3 className='inline font-bold'>DLギフトカード</h3>
             )}
-            cardDescription={(
+            description={(
               <p>音声作品代の支援ができます。</p>
             )}
-            cardTipType='recommended'
+            recommended
           />
         </div>
         <ul className='list-disc pl-8'>

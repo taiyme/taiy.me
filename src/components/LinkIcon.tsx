@@ -2,21 +2,22 @@ import type { Icon } from '@tabler/icons-react';
 import { Link } from 'next-view-transitions';
 
 import { clsx } from '@/utils/clsx';
-import { resolveUrl } from '@/utils/resolveUrl';
+import { generateAnchorProps, type LinkBaseProps } from '@/utils/generateAnchorProps';
 
-type LinkIconProps = Readonly<Pick<React.ComponentProps<typeof Link>, 'href' | 'aria-label'> & {
-  icon: Icon;
-}>;
+type LinkIconProps = Readonly<
+  & {
+    icon: Icon;
+  }
+  & Omit<LinkBaseProps, 'children'>
+>;
 
-export default function LinkIcon({ href, icon: IconComponent, ...props }: LinkIconProps) {
-  const { isExternalUrl } = resolveUrl(href);
+export default function LinkIcon({ icon: IconComponent, href, sponsored, ...props }: LinkIconProps) {
+  const { anchorProps } = generateAnchorProps({ href, sponsored });
 
   return (
     <Link
       {...props}
-      href={href}
-      target={isExternalUrl ? '_blank' : undefined}
-      rel={isExternalUrl ? 'noopener noreferrer' : undefined}
+      {...anchorProps}
       className={clsx(`
         inline-flex
         rounded-full

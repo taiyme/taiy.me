@@ -2,19 +2,17 @@ import { IconChevronRight, IconExternalLink } from '@tabler/icons-react';
 import { Link } from 'next-view-transitions';
 
 import { clsx } from '@/utils/clsx';
-import { resolveUrl } from '@/utils/resolveUrl';
+import { generateAnchorProps, type LinkBaseProps } from '@/utils/generateAnchorProps';
 
-type LinkButtonProps = Readonly<Pick<React.ComponentProps<typeof Link>, 'children' | 'href' | 'aria-label'>>;
+type LinkButtonProps = LinkBaseProps;
 
-export default function LinkButton({ children, href, ...props }: LinkButtonProps) {
-  const { isExternalUrl } = resolveUrl(href);
+export default function LinkButton({ children, href, sponsored, ...props }: LinkButtonProps) {
+  const { anchorProps, isExternalUrl } = generateAnchorProps({ href, sponsored });
 
   return (
     <Link
       {...props}
-      href={href}
-      target={isExternalUrl ? '_blank' : undefined}
-      rel={isExternalUrl ? 'noopener noreferrer' : undefined}
+      {...anchorProps}
       className={clsx(`
         group/linkButton
         inline-grid grid-flow-col items-center gap-1
