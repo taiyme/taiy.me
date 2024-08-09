@@ -19,7 +19,6 @@ import hooksPlugin from 'eslint-plugin-react-hooks';
 import simpleImportSortPlugin from 'eslint-plugin-simple-import-sort';
 // @ts-expect-error 型定義ファイルなし
 import tailwindPlugin from 'eslint-plugin-tailwindcss';
-// @ts-expect-error 型定義ファイルなし
 import unusedImportsPlugin from 'eslint-plugin-unused-imports';
 import globals from 'globals';
 import tsEslint from 'typescript-eslint';
@@ -68,7 +67,7 @@ const getRecommendedConfigs = () => /** @satisfies {FlatConfig[]} */([
       '@stylistic/plus': stylisticPlus,
       '@typescript-eslint': /** @type {ESLintPlugin} */(tsEslint.plugin),
       'simple-import-sort': simpleImportSortPlugin,
-      'unused-imports': /** @type {ESLintPlugin} */(unusedImportsPlugin),
+      'unused-imports': unusedImportsPlugin,
       react: fixupPluginRules(/** @type {ESLintPlugin} */(reactPlugin)),
       'react-hooks': fixupPluginRules(/** @type {ESLintPlugin} */(hooksPlugin)),
       'jsx-a11y': fixupPluginRules(/** @type {ESLintPlugin} */(jsxA11yPlugin)),
