@@ -99,7 +99,7 @@ export default function SpecialsDonatePage() {
           `)}
         >
           <DonateLinkCard
-            href='https://vivionblue.com/products/dld001p'
+            href='https://forbooks.jp/products/dld003p'
             label={(
               <h3 className='inline font-bold'>DLギフトカード</h3>
             )}
