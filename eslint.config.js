@@ -110,26 +110,42 @@ export default /** @satisfies {FlatConfig[]} */([
   {
     rules: {
       //#region JavaScript
-      'no-unused-vars': 'off', // unused-importsで対応
-      'no-undef': 'off',
+      'no-new-wrappers': 'error',
       'no-restricted-globals': ['error', '__dirname', '__filename', 'event', 'name'],
+      'no-restricted-imports': 'off',
+      'no-undef': 'off',
+      'no-unused-vars': 'off', // unused-importsで対応
+      'prefer-template': 'warn',
       'sort-imports': 'off',
       //#endregion JavaScript
 
       //#region TypeScript
-      '@typescript-eslint/no-explicit-any': 'error',
-      '@typescript-eslint/no-unused-vars': 'off', // unused-importsで対応
-      '@typescript-eslint/no-unnecessary-condition': 'warn',
-      '@typescript-eslint/no-var-requires': 'error',
-      '@typescript-eslint/no-inferrable-types': 'warn',
-      '@typescript-eslint/no-empty-function': 'off',
-      '@typescript-eslint/no-non-null-assertion': 'error',
+      '@typescript-eslint/consistent-type-imports': ['error', {
+        prefer: 'type-imports',
+        fixStyle: 'inline-type-imports',
+        disallowTypeAnnotations: true,
+      }],
       '@typescript-eslint/explicit-function-return-type': 'off',
+      '@typescript-eslint/no-empty-function': 'off',
+      '@typescript-eslint/no-explicit-any': 'error',
+      '@typescript-eslint/no-import-type-side-effects': 'error',
+      '@typescript-eslint/no-inferrable-types': 'warn',
+      '@typescript-eslint/no-non-null-assertion': 'error',
+      '@typescript-eslint/no-restricted-imports': ['error', {
+        paths: [{
+          name: 'next/link',
+          message: 'Please use \'next-view-transitions\' instead.',
+        }],
+      }],
+      '@typescript-eslint/no-unnecessary-condition': 'warn',
+      '@typescript-eslint/no-unused-vars': 'off', // unused-importsで対応
+      '@typescript-eslint/no-var-requires': 'error',
+      '@typescript-eslint/prefer-optional-chain': 'error',
       //#endregion TypeScript
 
       //#region simple-import-sort
-      'simple-import-sort/imports': 'warn',
       'simple-import-sort/exports': 'warn',
+      'simple-import-sort/imports': 'warn',
       //#endregion simple-import-sort
 
       //#region unused-imports
