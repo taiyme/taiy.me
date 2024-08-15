@@ -44,7 +44,7 @@ export default function AboutPage() {
             <p className='leading-relaxed'>このサイトです。</p>
           </li>
           <li>
-            <p className='leading-relaxed'><span className='font-bold'>u.taiy.me</span></p>
+            <p className='leading-relaxed'><span className='font-bold'>u.taiy.me</span> <LinkText href='https://github.com/taiyme/u.taiy.me'>ソースコード</LinkText></p>
             <p className='leading-relaxed'>taiy専用URL短縮サービスです。</p>
             <p className='leading-relaxed'>Hono + Cloudflare Workers製です。</p>
           </li>
