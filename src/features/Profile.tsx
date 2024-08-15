@@ -24,11 +24,13 @@ export default function Profile({ inIndexPage = false }: ProfileProps) {
       </div>
       <div className='-my-2 flex gap-2'>
         <LinkIcon
+          me
           href='https://u.taiy.me/fedi'
           icon={IconWorld}
           aria-label='taiyのFediverseを見る'
         />
         <LinkIcon
+          me
           href='https://github.com/taiyme'
           icon={IconBrandGithubFilled}
           aria-label='taiyのGitHubを見る'
@@ -41,7 +43,7 @@ export default function Profile({ inIndexPage = false }: ProfileProps) {
       </div>
       <DivOrFooter className='flex flex-col gap-4'>
         <div className='text-center'>
-          <LinkButton href='/about'>プロフィールを見る</LinkButton>
+          <LinkButton author href='/about'>プロフィールを見る</LinkButton>
         </div>
         <div className='space-y-1'>
           {!inIndexPage && (
@@ -65,6 +67,7 @@ export default function Profile({ inIndexPage = false }: ProfileProps) {
           <p className='text-center leading-none'>
             <Link
               href='/privacy'
+              rel='privacy-policy'
               className={clsx(`
                 rounded-[2px]
                 text-sm

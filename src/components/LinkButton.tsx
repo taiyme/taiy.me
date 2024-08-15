@@ -6,12 +6,11 @@ import { generateAnchorProps, type LinkBaseProps } from '@/utils/generateAnchorP
 
 type LinkButtonProps = LinkBaseProps;
 
-export default function LinkButton({ children, href, sponsored, ...props }: LinkButtonProps) {
-  const { anchorProps, isExternalUrl } = generateAnchorProps({ href, sponsored });
+export default function LinkButton(props: LinkButtonProps) {
+  const { anchorProps, children, isExternalUrl } = generateAnchorProps(props);
 
   return (
     <Link
-      {...props}
       {...anchorProps}
       className={clsx(`
         group/linkButton

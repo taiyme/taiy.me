@@ -3,37 +3,54 @@ import type { Link } from 'next-view-transitions';
 import { omitUndefined } from '@/utils/omitUndefined';
 import { resolveUrl } from '@/utils/resolveUrl';
 
+type AnchorProps = Readonly<
+  Pick<
+    React.ComponentProps<typeof Link>,
+    | 'href'
+    | 'aria-label'
+  >
+>;
+
 type GenerateAnchorPropsProps = Readonly<
-  & Pick<React.ComponentProps<typeof Link>, 'href'>
+  & AnchorProps
+  & Pick<React.ComponentProps<typeof Link>, 'children'>
   & {
+    author?: boolean;
+    me?: boolean;
     sponsored?: boolean;
   }
 >;
 
 type GenerateAnchorPropsResult = Readonly<
   & {
-    anchorProps: Pick<React.ComponentProps<typeof Link>, 'href' | 'rel' | 'target'>;
+    anchorProps: AnchorProps;
   }
+  & Pick<React.ComponentProps<typeof Link>, 'children'>
   & ReturnType<typeof resolveUrl>
 >;
 
-export const generateAnchorProps = ({ href, sponsored }: GenerateAnchorPropsProps) => {
+export const generateAnchorProps = <T extends GenerateAnchorPropsProps>({ children, href, author, me, sponsored, ...props }: T) => {
   const { resolvedUrl, isExternalUrl } = resolveUrl(href);
-  const rel = (
-    isExternalUrl
-      ? (sponsored ? 'noopener sponsored' : 'noopener noreferrer')
-      : (sponsored ? 'sponsored' : undefined)
-  );
+  const rel = Object.entries(({
+    noopener: isExternalUrl,
+    noreferrer: isExternalUrl && !sponsored,
+    external: isExternalUrl,
+    author,
+    me,
+    sponsored,
+  })).flatMap(([k, v]) => v ? [k] : []).join(' ') || undefined;
   const target = isExternalUrl ? '_blank' : undefined;
 
   return {
-    anchorProps: omitUndefined({ href, rel, target } as const),
+    anchorProps: {
+      ...props,
+      ...omitUndefined({ rel, target }),
+      href,
+    },
+    children,
     resolvedUrl,
     isExternalUrl,
   } as const satisfies GenerateAnchorPropsResult;
 };
 
-export type LinkBaseProps = Readonly<
-  & Pick<React.ComponentProps<typeof Link>, 'children' | 'href' | 'aria-label'>
-  & GenerateAnchorPropsProps
->;
+export type LinkBaseProps = GenerateAnchorPropsProps;

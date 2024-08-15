@@ -11,12 +11,11 @@ type LinkIconProps = Readonly<
   & Omit<LinkBaseProps, 'children'>
 >;
 
-export default function LinkIcon({ icon: IconComponent, href, sponsored, ...props }: LinkIconProps) {
-  const { anchorProps } = generateAnchorProps({ href, sponsored });
+export default function LinkIcon({ icon: IconComponent, ...props }: LinkIconProps) {
+  const { anchorProps } = generateAnchorProps(props);
 
   return (
     <Link
-      {...props}
       {...anchorProps}
       className={clsx(`
         inline-flex

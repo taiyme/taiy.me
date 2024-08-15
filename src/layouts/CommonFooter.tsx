@@ -74,6 +74,7 @@ export default function CommonFooter() {
             <p className='leading-none'>
               <Link
                 href='/privacy'
+                rel='privacy-policy'
                 className={clsx(`
                   rounded-[2px]
                   text-sm

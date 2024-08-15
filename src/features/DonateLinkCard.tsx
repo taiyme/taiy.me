@@ -10,12 +10,11 @@ type DonateLinkCardProps = Readonly<
   & Omit<LinkBaseProps, 'children'>
 >;
 
-export default function DonateLinkCard({ label, description, recommended, href, sponsored, ...props }: DonateLinkCardProps) {
-  const { anchorProps, isExternalUrl } = generateAnchorProps({ href, sponsored });
+export default function DonateLinkCard({ label, description, recommended, ...props }: DonateLinkCardProps) {
+  const { anchorProps, isExternalUrl } = generateAnchorProps(props);
 
   return (
     <Link
-      {...props}
       {...anchorProps}
       className={clsx(`
         group/donateCard

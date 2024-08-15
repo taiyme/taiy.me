@@ -7,12 +7,11 @@ import { generateAnchorProps, type LinkBaseProps } from '@/utils/generateAnchorP
 
 type LinkTextProps = LinkBaseProps;
 
-export default function LinkText({ children, href, sponsored, ...props }: LinkTextProps) {
-  const { anchorProps, resolvedUrl, isExternalUrl } = generateAnchorProps({ href, sponsored });
+export default function LinkText(props: LinkTextProps) {
+  const { anchorProps, children, resolvedUrl, isExternalUrl } = generateAnchorProps(props);
 
   return (
     <Link
-      {...props}
       {...anchorProps}
       className={clsx(`
         group/linkText
