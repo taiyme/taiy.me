@@ -41,18 +41,15 @@ importers:
       '@eslint/compat':
         specifier: ^1.1.1
         version: 1.1.1
-      '@eslint/js':
-        specifier: ^9.9.0
-        version: 9.9.0
       '@next/eslint-plugin-next':
         specifier: ^14.2.5
         version: 14.2.5
-      '@stylistic/eslint-plugin':
-        specifier: ^2.6.4
-        version: 2.6.4(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4)
       '@tailwindcss/container-queries':
         specifier: ^0.1.1
         version: 0.1.1(tailwindcss@3.4.10)
+      '@taiyme/eslint-config':
+        specifier: ^0.0.1
+        version: 0.0.1(@typescript-eslint/eslint-plugin@8.1.0(@typescript-eslint/parser@8.1.0(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4))(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4))(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4)
       '@total-typescript/ts-reset':
         specifier: ^0.5.1
         version: 0.5.1
@@ -83,24 +80,9 @@ importers:
       eslint-config-next:
         specifier: ^14.2.5
         version: 14.2.5(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4)
-      eslint-plugin-jsx-a11y:
-        specifier: ^6.9.0
-        version: 6.9.0(eslint@9.9.0(jiti@1.21.6))
-      eslint-plugin-react:
-        specifier: ^7.35.0
-        version: 7.35.0(eslint@9.9.0(jiti@1.21.6))
-      eslint-plugin-react-hooks:
-        specifier: ^4.6.2
-        version: 4.6.2(eslint@9.9.0(jiti@1.21.6))
-      eslint-plugin-simple-import-sort:
-        specifier: ^12.1.1
-        version: 12.1.1(eslint@9.9.0(jiti@1.21.6))
       eslint-plugin-tailwindcss:
         specifier: ^3.17.4
         version: 3.17.4(patch_hash=6p7xycybtm4qe4kjmz2abkycuq)(tailwindcss@3.4.10)
-      eslint-plugin-unused-imports:
-        specifier: ^4.1.3
-        version: 4.1.3(@typescript-eslint/eslint-plugin@8.1.0(@typescript-eslint/parser@8.1.0(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4))(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4))(eslint@9.9.0(jiti@1.21.6))
       globals:
         specifier: ^15.9.0
         version: 15.9.0
@@ -116,9 +98,6 @@ importers:
       typescript:
         specifier: ^5.5.4
         version: 5.5.4
-      typescript-eslint:
-        specifier: ^8.1.0
-        version: 8.1.0(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4)
 
 packages:
 
@@ -312,6 +291,13 @@ packages:
     resolution: {integrity: sha512-p18dswChx6WnTSaJCSGx6lTmrGzNNvm2FtXmiO6AuA1V4U5REyoqwmT6kgAsIMdjo07QdAfYXHJ4hnMtfHzWgA==}
     peerDependencies:
       tailwindcss: '>=3.2.0'
+
+  '@taiyme/eslint-config@0.0.1':
+    resolution: {integrity: sha512-DSM5PZuSlqXHmdbuFSFzR1jgfTfF/1iCEq723If+jWqD70XG++9dslPdc4mCbO5+8NIdFUZhLkD9Rbm3sxSs/A==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      eslint: ^9.9.0
+      typescript: '>=5'
 
   '@total-typescript/ts-reset@0.5.1':
     resolution: {integrity: sha512-AqlrT8YA1o7Ff5wPfMOL0pvL+1X+sw60NN6CcOCqs658emD6RfiXhF7Gu9QcfKBH7ELY2nInLhKSCWVoNL70MQ==}
@@ -1951,6 +1937,24 @@ snapshots:
   '@tailwindcss/container-queries@0.1.1(tailwindcss@3.4.10)':
     dependencies:
       tailwindcss: 3.4.10
+
+  '@taiyme/eslint-config@0.0.1(@typescript-eslint/eslint-plugin@8.1.0(@typescript-eslint/parser@8.1.0(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4))(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4))(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4)':
+    dependencies:
+      '@eslint/compat': 1.1.1
+      '@eslint/js': 9.9.0
+      '@stylistic/eslint-plugin': 2.6.4(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4)
+      '@types/eslint__js': 8.42.3
+      eslint: 9.9.0(jiti@1.21.6)
+      eslint-plugin-jsx-a11y: 6.9.0(eslint@9.9.0(jiti@1.21.6))
+      eslint-plugin-react: 7.35.0(eslint@9.9.0(jiti@1.21.6))
+      eslint-plugin-react-hooks: 4.6.2(eslint@9.9.0(jiti@1.21.6))
+      eslint-plugin-simple-import-sort: 12.1.1(eslint@9.9.0(jiti@1.21.6))
+      eslint-plugin-unused-imports: 4.1.3(@typescript-eslint/eslint-plugin@8.1.0(@typescript-eslint/parser@8.1.0(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4))(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4))(eslint@9.9.0(jiti@1.21.6))
+      typescript: 5.5.4
+      typescript-eslint: 8.1.0(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4)
+    transitivePeerDependencies:
+      - '@typescript-eslint/eslint-plugin'
+      - supports-color
 
   '@total-typescript/ts-reset@0.5.1': {}
 
