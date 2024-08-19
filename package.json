@@ -1,18 +1,19 @@
 {
   "name": "taiy.me",
   "version": "1.0.0",
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/taiyme/taiy.me.git"
   },
-  "packageManager": "pnpm@9.7.1+sha512.faf344af2d6ca65c4c5c8c2224ea77a81a5e8859cbc4e06b1511ddce2f0151512431dd19e6aff31f2c6a8f5f2aced9bd2273e1fed7dd4de1868984059d2c4247",
+  "license": "MIT",
+  "author": "taiy <me@taiy.me> (https://taiy.me/)",
+  "type": "module",
   "scripts": {
-    "dev": "next dev -p 8080",
     "build": "next build",
-    "start": "next start",
+    "dev": "next dev -p 8080",
     "lint": "eslint .",
-    "lint:fix": "eslint --fix ."
+    "lint:fix": "eslint --fix .",
+    "start": "next start"
   },
   "dependencies": {
     "@tabler/icons-react": "^3.12.0",
@@ -32,7 +33,7 @@
     "@total-typescript/ts-reset": "^0.5.1",
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/eslint__js": "^8.42.3",
-    "@types/node": "^22.3.0",
+    "@types/node": "^22.4.1",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/parser": "^8.1.0",
@@ -52,6 +53,7 @@
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.1.0"
   },
+  "packageManager": "pnpm@9.7.1+sha512.faf344af2d6ca65c4c5c8c2224ea77a81a5e8859cbc4e06b1511ddce2f0151512431dd19e6aff31f2c6a8f5f2aced9bd2273e1fed7dd4de1868984059d2c4247",
   "pnpm": {
     "overrides": {
       "eslint": "$eslint"
