@@ -16,7 +16,7 @@ export default function LinkText(props: LinkTextProps) {
       className={clsx(`
         group/linkText
         rounded-[2px]
-        text-blue-500
+        text-blue-600
         outline-none outline-0
         [line-break:anywhere]
         focus-visible:outline-2 focus-visible:ring-2
@@ -43,7 +43,7 @@ export default function LinkText(props: LinkTextProps) {
             inline
             size-[0.85em]
             align-middle
-            text-blue-500
+            text-blue-600
           `)}
         />
       )}

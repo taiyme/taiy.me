@@ -25,7 +25,7 @@ export default function LinkEmail({ user, domain }: LinkEmailProps) {
           href={`mailto:${email}`}
           className={clsx(`
             rounded-[2px]
-            text-blue-500
+            text-blue-600
             outline-none outline-0
             hover:underline
             focus-visible:!no-underline focus-visible:outline-2 focus-visible:ring-2
@@ -39,7 +39,7 @@ export default function LinkEmail({ user, domain }: LinkEmailProps) {
           onClick={onClick}
           className={clsx(`
             rounded-[2px]
-            text-blue-500
+            text-blue-600
             outline-none outline-0
             hover:underline
             focus-visible:!no-underline focus-visible:outline-2 focus-visible:ring-2
