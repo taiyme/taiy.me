@@ -29,10 +29,10 @@ export default function CommonFooter() {
               px-2.5 py-1.5
               text-sm
               outline-none outline-0
-              transition-colors
               hover:bg-black/5
               focus-visible:!bg-transparent focus-visible:outline-2 focus-visible:ring-2
               active:bg-black/5
+              motion-safe:transition-colors
             `)}
           >
             <div

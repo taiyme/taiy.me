@@ -22,10 +22,10 @@ export default function DonateLinkCard({ label, description, recommended, ...pro
         rounded-2xl border
         px-4 py-2.5
         outline-none outline-0
-        transition-colors
         hover:border-transparent hover:bg-black/5
         focus-visible:!border-transparent focus-visible:!bg-transparent focus-visible:outline-2 focus-visible:ring-2
         active:border-transparent active:bg-black/5
+        motion-safe:transition-colors
       `)}
     >
       <div className='col-span-2 flex flex-wrap items-center gap-x-2'>
@@ -38,10 +38,10 @@ export default function DonateLinkCard({ label, description, recommended, ...pro
               bg-gradient-to-br from-lime-200 to-red-100
               px-1 py-0.5
               text-xs
-              transition-opacity
               group-hover/donateCard:opacity-80
               group-focus-visible/donateCard:!opacity-100
               group-active/donateCard:opacity-80
+              motion-safe:transition-opacity
             `)}
           >
             おすすめ
@@ -68,9 +68,9 @@ export default function DonateLinkCard({ label, description, recommended, ...pro
             className={clsx(`
               size-[1.2em]
               text-gray-500 opacity-80
-              group-hover/donateCard:animate-[bounceRight_2s_infinite]
-              group-focus-visible/donateCard:animate-[bounceRight_2s_infinite]
-              group-active/donateCard:animate-[bounceRight_2s_infinite]
+              motion-safe:group-hover/donateCard:animate-[bounceRight_2s_infinite]
+              motion-safe:group-focus-visible/donateCard:animate-[bounceRight_2s_infinite]
+              motion-safe:group-active/donateCard:animate-[bounceRight_2s_infinite]
             `)}
           />
         )}
