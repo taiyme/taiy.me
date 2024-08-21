@@ -17,9 +17,9 @@ export default function LinkText(props: LinkTextProps) {
         group/linkText
         rounded-[2px]
         text-blue-500
-        outline-none
+        outline-none outline-0
         [line-break:anywhere]
-        focus-visible:ring-2
+        focus-visible:outline-2 focus-visible:ring-2
       `)}
     >
       <span

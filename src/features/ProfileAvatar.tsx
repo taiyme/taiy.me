@@ -50,9 +50,9 @@ export default function ProfileAvatar() {
         overflow-clip
         rounded-full
         shadow-xl
-        outline-none
+        outline-none outline-0
         transition-opacity
-        focus-visible:ring-2
+        focus-visible:outline-2 focus-visible:ring-2
         @md/profile:size-56
       `, {
         'cursor-pointer': !hide,

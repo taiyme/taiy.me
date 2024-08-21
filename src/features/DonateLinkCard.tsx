@@ -21,10 +21,10 @@ export default function DonateLinkCard({ label, description, recommended, ...pro
         grid grid-cols-[1fr_auto] grid-rows-[auto_1fr] gap-1
         rounded-2xl border
         px-4 py-2.5
-        outline-none
+        outline-none outline-0
         transition-colors
         hover:border-transparent hover:bg-black/5
-        focus-visible:!border-transparent focus-visible:!bg-transparent focus-visible:ring-2
+        focus-visible:!border-transparent focus-visible:!bg-transparent focus-visible:outline-2 focus-visible:ring-2
         active:border-transparent active:bg-black/5
       `)}
     >

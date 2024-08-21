@@ -26,9 +26,9 @@ export default function LinkEmail({ user, domain }: LinkEmailProps) {
           className={clsx(`
             rounded-[2px]
             text-blue-500
-            outline-none
+            outline-none outline-0
             hover:underline
-            focus-visible:!no-underline focus-visible:ring-2
+            focus-visible:!no-underline focus-visible:outline-2 focus-visible:ring-2
             active:underline
           `)}
         >
@@ -40,9 +40,9 @@ export default function LinkEmail({ user, domain }: LinkEmailProps) {
           className={clsx(`
             rounded-[2px]
             text-blue-500
-            outline-none
+            outline-none outline-0
             hover:underline
-            focus-visible:!no-underline focus-visible:ring-2
+            focus-visible:!no-underline focus-visible:outline-2 focus-visible:ring-2
             active:underline
           `)}
         >

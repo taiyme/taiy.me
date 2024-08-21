@@ -44,9 +44,9 @@ export default function ProfileComment() {
         select-none
         rounded-[2px]
         px-1
-        outline-none
+        outline-none outline-0
         transition-opacity
-        focus-visible:ring-2
+        focus-visible:outline-2 focus-visible:ring-2
         @md/profile:text-lg
       `, {
         'cursor-pointer': !hide,
