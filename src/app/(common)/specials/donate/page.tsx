@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 
+import Grid from '@/components/Grid';
 import LinkEmail from '@/components/LinkEmail';
 import LinkText from '@/components/LinkText';
 import DonateCard from '@/features/DonateCard';
 import DonateLinkCard from '@/features/DonateLinkCard';
-import { clsx } from '@/utils/clsx';
 import { generateStaticMetadata } from '@/utils/generateStaticMetadata';
 
 export const metadata = {
@@ -24,12 +24,7 @@ export default function SpecialsDonatePage() {
       </header>
       <section className='space-y-3'>
         <h2 className='text-lg font-bold @xl/page:text-xl'>送金する</h2>
-        <div
-          className={clsx(`
-            grid grid-cols-1 gap-4
-            @xs/page:grid-cols-[repeat(auto-fill,minmax(16rem,1fr))]
-          `)}
-        >
+        <Grid>
           <DonateCard
             label={(
               <h3 className='inline font-bold'>Kyash</h3>
@@ -54,16 +49,11 @@ export default function SpecialsDonatePage() {
             )}
             recommended
           />
-        </div>
+        </Grid>
       </section>
       <section className='space-y-3'>
         <h2 className='text-lg font-bold @xl/page:text-xl'>継続支援する</h2>
-        <div
-          className={clsx(`
-            grid grid-cols-1 gap-4
-            @xs/page:grid-cols-[repeat(auto-fill,minmax(16rem,1fr))]
-          `)}
-        >
+        <Grid>
           <DonateLinkCard
             href='https://taiy.fanbox.cc/'
             label={(
@@ -88,16 +78,11 @@ export default function SpecialsDonatePage() {
               </>
             )}
           />
-        </div>
+        </Grid>
       </section>
       <section className='space-y-3'>
         <h2 className='text-lg font-bold @xl/page:text-xl'>その他</h2>
-        <div
-          className={clsx(`
-            grid grid-cols-1 gap-4
-            @xs/page:grid-cols-[repeat(auto-fill,minmax(16rem,1fr))]
-          `)}
-        >
+        <Grid>
           <DonateLinkCard
             href='https://forbooks.jp/products/dld003p'
             label={(
@@ -108,7 +93,7 @@ export default function SpecialsDonatePage() {
             )}
             recommended
           />
-        </div>
+        </Grid>
         <ul className='list-disc pl-8'>
           <li>
             <LinkText href='https://u.taiy.me/amazon'>

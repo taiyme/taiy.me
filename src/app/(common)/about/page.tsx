@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
+import Grid from '@/components/Grid';
 import LinkText from '@/components/LinkText';
 import AboutCard from '@/features/AboutCard';
-import { clsx } from '@/utils/clsx';
 import { generateStaticMetadata } from '@/utils/generateStaticMetadata';
 
 export const metadata = {
@@ -40,12 +40,7 @@ export default function AboutPage() {
       </section>
       <section className='space-y-3'>
         <h2 className='text-lg font-bold @xl/page:text-xl'>作ったもの</h2>
-        <div
-          className={clsx(`
-            grid grid-cols-1 gap-4
-            @xs/page:grid-cols-[repeat(auto-fill,minmax(16rem,1fr))]
-          `)}
-        >
+        <Grid>
           <AboutCard
             label={(
               <>
@@ -99,7 +94,7 @@ export default function AboutPage() {
               </>
             )}
           />
-        </div>
+        </Grid>
       </section>
     </article>
   );
