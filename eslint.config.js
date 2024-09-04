@@ -22,6 +22,7 @@ const files = ['**/*.{js,ts,jsx,tsx}'];
 export default [
   gitignore(),
   {
+    name: 'taiy.me/ignores',
     ignores: [
       'patches/**',
       'public/**',
@@ -29,6 +30,7 @@ export default [
     ],
   },
   {
+    name: 'taiy.me/setup',
     languageOptions: {
       globals: {
         ...globals.browser,
@@ -37,8 +39,6 @@ export default [
       },
       parser: tsEslintParser,
       parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
         project: './tsconfig.json',
         tsconfigRootDir: import.meta.dirname,
       },
@@ -49,7 +49,7 @@ export default [
     settings: {
       tailwindcss: {
         callees: ['clsx'],
-        config: 'tailwind.config.js',
+        config: './tailwind.config.js',
       },
     },
     files,
@@ -57,15 +57,13 @@ export default [
   ...[
     ...taiymeConfig.configs.typescript,
     ...taiymeConfig.configs.react,
+    .../** @type {Config[]} */(tailwindPlugin.configs['flat/recommended']),
   ].map((config) => ({
     ...config,
     files,
   })),
-  .../** @type {Config[]} */(tailwindPlugin.configs['flat/recommended']).map((config) => ({
-    ...config,
-    files,
-  })),
   {
+    name: 'taiy.me/rules',
     rules: {
       .../** @type {Rules} */(nextPlugin.configs.recommended.rules),
       .../** @type {Rules} */(nextPlugin.configs['core-web-vitals'].rules),
