@@ -93,11 +93,19 @@ export default function SpecialsAsmrPage() {
         <section className='space-y-2 [counter-increment:asmr-count_1]'>
           <ASMRSectionTitle
             workType='adult'
-            workName='捨て猫ダウナーをとことん愛でたら悶絶するほど幸せになる音声'
-            workNumber='RJ270963'
+            workName='まいにちソフレ'
+            workNumber='RJ01238763'
           />
-          <p className='leading-relaxed'>ケモ耳属性のヒロインをひたすらに愛でるお話です。捨て猫故、最初は警戒心が強いですが、トラックを重ねるごとにデレデレになります。</p>
-          <p className='leading-relaxed'>この作品はシリーズ1作目です。<LinkText sponsored href='https://www.dlsite.com/maniax/dlaf/=/t/n/link/work/aid/taiyme/id/RJ297281.html' aria-label='白猫ダウナーと過ごす甘くて爽やかなえちえちサマーバケーション'>2作目</LinkText>と<LinkText sponsored href='https://www.dlsite.com/maniax/dlaf/=/t/n/link/work/aid/taiyme/id/RJ353250.html' aria-label='白猫ダウナーを永遠に愛でたくなる最上級の幸せ音声'>3作目</LinkText>もよろしくお願いします。</p>
+          <p className='leading-relaxed'>ソフレ(添い寝フレンド)を隣に召喚して、安眠射精添い寝させてくれるお話です。</p>
+        </section>
+        <section className='space-y-2 [counter-increment:asmr-count_1]'>
+          <ASMRSectionTitle
+            workType='adult'
+            workName='無表情な妹の甘々でちょっとイジワルな愛され性欲処理♪'
+            workNumber='RJ302316'
+          />
+          <p className='leading-relaxed'>無表情妹ちゃん(ブラコン)にあまあまイジワル搾精えっちされちゃうお話です。</p>
+          <p className='leading-relaxed'>続編の<LinkText sponsored href='https://www.dlsite.com/maniax/dlaf/=/t/n/link/work/aid/taiyme/id/RJ349453.html'>無表情な妹のもっと甘々でイジワルなイチャラブ溺愛搾精♪</LinkText>もよろしくお願いします。</p>
         </section>
         <section className='space-y-2 [counter-increment:asmr-count_1]'>
           <ASMRSectionTitle
@@ -106,7 +114,7 @@ export default function SpecialsAsmrPage() {
             workNumber='RJ318205'
           />
           <p className='leading-relaxed'>小悪魔属性のヒロインたちとあまあまえっちするお話です。いつもお世話になっております。</p>
-          <p className='leading-relaxed'>この作品はシリーズ1作目です。<LinkText sponsored href='https://www.dlsite.com/maniax/dlaf/=/t/n/link/work/aid/taiyme/id/RJ381836.html' aria-label='あまあま小悪魔2～超密着0距離ご奉仕～'>2作目</LinkText>もよろしくお願いします。</p>
+          <p className='leading-relaxed'>続編の<LinkText sponsored href='https://www.dlsite.com/maniax/dlaf/=/t/n/link/work/aid/taiyme/id/RJ381836.html'>あまあま小悪魔2～超密着0距離ご奉仕～</LinkText>もよろしくお願いします。</p>
         </section>
         <section className='space-y-2 [counter-increment:asmr-count_1]'>
           <ASMRSectionTitle
@@ -120,7 +128,7 @@ export default function SpecialsAsmrPage() {
         <section className='space-y-2 [counter-increment:asmr-count_1]'>
           <ASMRSectionTitle
             workType='adult'
-            workName='君にささめく、塚松さん。 -じゃあ、マスク外して『ナマ』の声聞いてみる?-'
+            workName='君にささめく、塚松さん。 -じゃあ、マスク外して『ナマ』の声聞いてみる？-'
             workNumber='RJ01065777'
           />
           <p className='leading-relaxed'>あの、まずは購入して聴いてほしいのですが、ヒロインの声質と、音作りが、すごいです。うまく言語化できませんが、とにかくすごいです。</p>
@@ -129,22 +137,11 @@ export default function SpecialsAsmrPage() {
         <section className='space-y-2 [counter-increment:asmr-count_1]'>
           <ASMRSectionTitle
             workType='adult'
-            workName='悪魔(わたし)とエッチできるなら死んでも構わない？'
-            workNumber='RJ01092090'
-          />
-          <p className='leading-relaxed'>ダウナーロリ悪魔なヒロインにダメにされちゃうお話です。</p>
-        </section>
-        <section className='space-y-2 [counter-increment:asmr-count_1]'>
-          <ASMRSectionTitle
-            workType='adult'
             workName='おふとんあたためようかい'
             workNumber='RJ01127400'
           />
           <p className='leading-relaxed'>自称・座敷童のヒロインたちにあまあまイジワルされちゃうお話です。</p>
-          <aside>
-            <h4 className='sr-only'>余談</h4>
-            <p className='leading-relaxed'>余談ですが、<LinkText href='https://team.matechan.com/notes/9om1fpzyfe'>まてかすがこの作品を購入した経緯</LinkText>がおもろいので見ていってください。</p>
-          </aside>
+          <p className='leading-relaxed'>余談ですが、<LinkText href='https://team.matechan.com/notes/9om1fpzyfe'>まてかすがこの作品を購入した経緯</LinkText>がおもろいので見ていってください。</p>
         </section>
       </section>
     </article>
