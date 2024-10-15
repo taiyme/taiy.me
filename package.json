@@ -18,41 +18,41 @@
   "dependencies": {
     "@tabler/icons-react": "3.19.0",
     "jotai": "2.10.0",
-    "next": "14.2.14",
+    "next": "14.2.15",
     "next-view-transitions": "0.3.2",
     "punycode": "2.3.1",
     "react": "18.3.1",
     "react-dom": "18.3.1"
   },
   "devDependencies": {
-    "@eslint/compat": "1.1.1",
-    "@next/eslint-plugin-next": "14.2.14",
+    "@eslint/compat": "1.2.0",
+    "@next/eslint-plugin-next": "14.2.15",
     "@tailwindcss/container-queries": "0.1.1",
-    "@taiyme/eslint-config": "0.4.6",
+    "@taiyme/eslint-config": "0.5.0",
     "@total-typescript/ts-reset": "0.6.1",
     "@types/eslint-config-prettier": "6.11.3",
     "@types/eslint__js": "8.42.3",
-    "@types/node": "22.7.4",
+    "@types/node": "22.7.5",
     "@types/react": "18.3.11",
-    "@types/react-dom": "18.3.0",
-    "@typescript-eslint/parser": "8.8.0",
-    "eslint": "9.11.1",
+    "@types/react-dom": "18.3.1",
+    "@typescript-eslint/parser": "8.9.0",
+    "eslint": "9.12.0",
     "eslint-config-flat-gitignore": "0.3.0",
-    "eslint-config-next": "14.2.14",
-    "eslint-plugin-tailwindcss": "3.17.4",
-    "globals": "15.10.0",
+    "eslint-config-next": "14.2.15",
+    "eslint-plugin-tailwindcss": "3.17.5",
+    "globals": "15.11.0",
     "postcss": "8.4.47",
     "postcss-load-config": "6.0.1",
     "tailwindcss": "3.4.13",
-    "typescript": "5.6.2"
+    "typescript": "5.6.3"
   },
-  "packageManager": "pnpm@9.12.0+sha512.4abf725084d7bcbafbd728bfc7bee61f2f791f977fd87542b3579dcb23504d170d46337945e4c66485cd12d588a0c0e570ed9c477e7ccdd8507cf05f3f92eaca",
+  "packageManager": "pnpm@9.12.1+sha512.e5a7e52a4183a02d5931057f7a0dbff9d5e9ce3161e33fa68ae392125b79282a8a8a470a51dfc8a0ed86221442eb2fb57019b0990ed24fab519bf0e1bc5ccfc4",
   "pnpm": {
     "overrides": {
       "eslint": "$eslint"
     },
     "patchedDependencies": {
-      "eslint-plugin-tailwindcss@3.17.4": "patches/eslint-plugin-tailwindcss@3.17.4.patch"
+      "eslint-plugin-tailwindcss@3.17.5": "patches/eslint-plugin-tailwindcss@3.17.5.patch"
     }
   }
 }
