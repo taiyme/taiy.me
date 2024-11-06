@@ -4,7 +4,7 @@
     "lib": [
       "DOM",
       "DOM.Iterable",
-      "ESNext"
+      "ESNext",
     ],
     "allowJs": true,
     "skipLibCheck": true,
@@ -23,21 +23,19 @@
     "noUncheckedIndexedAccess": true,
     "plugins": [
       {
-        "name": "next"
-      }
+        "name": "next",
+      },
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    }
+      "@/*": ["./src/*"],
+    },
   },
   "exclude": [
     "node_modules/**",
     "out/**",
     "patches/**",
-    "public/**"
+    "public/**",
   ],
   "include": [
     "**/*.js",
@@ -46,6 +44,6 @@
     "**/*.tsx",
     "next-env.d.ts",
     "reset.d.ts",
-    ".next/types/**/*.ts"
-  ]
+    ".next/types/**/*.ts",
+  ],
 }
