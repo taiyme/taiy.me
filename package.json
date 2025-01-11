@@ -16,37 +16,42 @@
     "start": "next start"
   },
   "dependencies": {
-    "@tabler/icons-react": "3.22.0",
-    "jotai": "2.10.3",
-    "next": "15.0.3",
-    "next-view-transitions": "0.3.2",
+    "@tabler/icons-react": "3.28.1",
+    "jotai": "2.11.0",
+    "next": "15.1.4",
+    "next-view-transitions": "0.3.4",
     "punycode": "2.3.1",
     "react": "18.3.1",
     "react-dom": "18.3.1"
   },
   "devDependencies": {
-    "@eslint/compat": "1.2.3",
-    "@next/eslint-plugin-next": "15.0.3",
+    "@eslint/compat": "1.2.5",
+    "@next/eslint-plugin-next": "15.1.4",
     "@tailwindcss/container-queries": "0.1.1",
-    "@taiyme/eslint-config": "0.5.2",
+    "@taiyme/eslint-config": "0.6.0",
     "@total-typescript/ts-reset": "0.6.1",
     "@types/eslint-config-prettier": "6.11.3",
     "@types/eslint__js": "8.42.3",
-    "@types/node": "22.10.0",
+    "@types/node": "22.10.5",
+    "@types/punycode": "2.1.4",
     "@types/react": "18.3.12",
-    "@types/react-dom": "18.3.1",
-    "@typescript-eslint/parser": "8.16.0",
-    "eslint": "9.15.0",
-    "eslint-config-flat-gitignore": "0.3.0",
-    "eslint-config-next": "15.0.3",
+    "@types/react-dom": "18.3.5",
+    "@typescript-eslint/parser": "8.19.1",
+    "eslint": "9.18.0",
+    "eslint-config-flat-gitignore": "1.0.0",
+    "eslint-config-next": "15.1.4",
     "eslint-plugin-tailwindcss": "3.17.5",
-    "globals": "15.12.0",
+    "globals": "15.14.0",
     "postcss": "8.4.49",
     "postcss-load-config": "6.0.1",
-    "tailwindcss": "3.4.15",
-    "typescript": "5.7.2"
+    "tailwindcss": "3.4.17",
+    "typescript": "5.7.3"
   },
-  "packageManager": "pnpm@9.14.2+sha512.6e2baf77d06b9362294152c851c4f278ede37ab1eba3a55fda317a4a17b209f4dbb973fb250a77abc463a341fcb1f17f17cfa24091c4eb319cda0d9b84278387",
+  "packageManager": "pnpm@9.15.3",
+  "engines": {
+    "node": ">=22",
+    "pnpm": ">=9"
+  },
   "pnpm": {
     "overrides": {
       "eslint": "$eslint"

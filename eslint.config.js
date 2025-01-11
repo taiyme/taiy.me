@@ -72,6 +72,9 @@ export default [
         paths: [{
           name: 'next/link',
           message: 'Please use \'next-view-transitions\' instead.',
+        }, {
+          name: 'punycode',
+          message: 'Please use \'punycode/\' instead.',
         }],
       }],
       '@next/next/no-head-element': 'off',
