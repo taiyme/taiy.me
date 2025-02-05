@@ -1,1 +1,1 @@
-export const copyright = '© taiy 2024';
+export const copyright = '© taiy 2025';
