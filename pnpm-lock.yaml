@@ -19,9 +19,6 @@ importers:
       '@tabler/icons-react':
         specifier: 3.29.0
         version: 3.29.0(react@18.3.1)
-      jotai:
-        specifier: 2.11.3
-        version: 2.11.3(@types/react@18.3.12)(react@18.3.1)
       next:
         specifier: 15.1.6
         version: 15.1.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1229,18 +1226,6 @@ packages:
   jiti@2.1.0:
     resolution: {integrity: sha512-Nftp80J8poC3u+93ZxpjstsgfQ5d0o5qyD6yStv32sgnWr74xRxBppEwsUoA/GIdrJpgGRkC1930YkLcAsFdSw==}
     hasBin: true
-
-  jotai@2.11.3:
-    resolution: {integrity: sha512-B/PsewAQ0UOS5e2+TTWegUPQ3SCLPCjPY24LYUjfn2EorGlluTA2dFjVLgF1+xHLjK9Jit3y5mKHyMG3Xq/GZg==}
-    engines: {node: '>=12.20.0'}
-    peerDependencies:
-      '@types/react': '>=17.0.0'
-      react: '>=17.0.0'
-    peerDependenciesMeta:
-      '@types/react':
-        optional: true
-      react:
-        optional: true
 
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
@@ -3172,11 +3157,6 @@ snapshots:
 
   jiti@2.1.0:
     optional: true
-
-  jotai@2.11.3(@types/react@18.3.12)(react@18.3.1):
-    optionalDependencies:
-      '@types/react': 18.3.12
-      react: 18.3.1
 
   js-tokens@4.0.0: {}
 

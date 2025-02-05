@@ -1,7 +1,7 @@
 import { Link } from 'next-view-transitions';
 
-import { defaultAvatar } from '@/constants/avatarList';
 import { copyright } from '@/constants/copyright';
+import { profileAvatar } from '@/constants/profile';
 import { clsx } from '@/utils/clsx';
 
 export default function CommonFooter() {
@@ -48,7 +48,7 @@ export default function CommonFooter() {
             >
               <picture>
                 <img
-                  src={defaultAvatar}
+                  src={profileAvatar}
                   alt='taiyのアイコン'
                   width={32}
                   height={32}
