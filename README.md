@@ -4,6 +4,8 @@ taiyのサイトのソースコードです。 <https://taiy.me/>
 
 ## 仕様
 
+- パッケージ管理
+  - pnpm <https://pnpm.io/>
 - 言語
   - TypeScript <https://www.typescriptlang.org/>
   - React <https://react.dev/>
@@ -15,11 +17,9 @@ taiyのサイトのソースコードです。 <https://taiy.me/>
 
 ## 開発
 
-前提: Corepackが有効であること
-
 ```sh
 # 依存関係のインストール
-pnpm i
+pnpm install
 
 # 開発サーバー立ち上げ
 pnpm dev
