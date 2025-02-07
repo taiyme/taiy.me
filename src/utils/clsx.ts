@@ -22,5 +22,5 @@ const toFlatValue = (input: ClsxValue): string[] => {
 };
 
 export const clsx = (...inputs: ClsxValue[]) => {
-  return Array.from(new Set(inputs.flatMap(toFlatValue))).join(' ');
+  return Array.from(inputs.flatMap(toFlatValue)).join(' ');
 };
