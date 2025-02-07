@@ -1,4 +1,6 @@
-import { profileAvatar } from '@/constants/profile';
+import NextImage from 'next/image';
+
+import ImagesAvatarsTaiy512 from '@/images/avatars/taiy_512.png';
 import { clsx } from '@/utils/clsx';
 
 export default function ProfileAvatar() {
@@ -15,17 +17,11 @@ export default function ProfileAvatar() {
       `)}
     >
       <picture>
-        <img
-          src={profileAvatar}
+        <NextImage
+          src={ImagesAvatarsTaiy512}
           alt='taiyのアイコン'
-          width={224}
-          height={224}
-          loading='eager'
-          className={clsx(`
-            pointer-events-none
-            size-full
-            select-none
-          `)}
+          priority={true}
+          className='pointer-events-none size-full select-none'
         />
       </picture>
     </div>

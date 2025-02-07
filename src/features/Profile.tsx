@@ -5,7 +5,6 @@ import LinkButton from '@/components/LinkButton';
 import LinkIcon from '@/components/LinkIcon';
 import { copyright } from '@/constants/copyright';
 import ProfileAvatar from '@/features/ProfileAvatar';
-import ProfileComment from '@/features/ProfileComment';
 import { clsx } from '@/utils/clsx';
 
 type ProfileProps = Readonly<{
@@ -20,7 +19,9 @@ export default function Profile({ inIndexPage = false }: ProfileProps) {
       <ProfileAvatar />
       <div className='flex flex-col items-center gap-1'>
         <h1 className='text-2xl font-bold @md/profile:text-3xl'>taiy</h1>
-        <ProfileComment />
+        <div className='@md/profile:text-lg'>
+          <span className='text-gray-500'>a.k.a. taiyme</span>
+        </div>
       </div>
       <div className='-my-2 flex gap-2'>
         <LinkIcon

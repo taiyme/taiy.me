@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import type { Link } from 'next-view-transitions';
 
+import ImagesFaviconsOpenGraph from '@/images/favicons/open-graph.png';
+
 type StaticRoutes = Exclude<Extract<React.ComponentProps<typeof Link>['href'], `/${string}`>, `${string}${'?' | '#'}${string}`>;
 
 type IsAny<T> = 0 extends 1 & T ? true : false;
@@ -56,7 +58,7 @@ export const generateStaticMetadata = (props: GenerateStaticMetadataProps) => {
       title: getAbsoluteTitle(props.title),
       locale: 'ja_JP',
       images: {
-        url: 'https://assets.taiy.me/taiy.me/favicons/open-graph.png',
+        url: ImagesFaviconsOpenGraph.src,
         alt: 'taiyのアイコン',
         type: 'image/png',
         width: 384,

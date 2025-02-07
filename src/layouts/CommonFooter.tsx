@@ -1,7 +1,8 @@
+import NextImage from 'next/image';
 import { Link } from 'next-view-transitions';
 
 import { copyright } from '@/constants/copyright';
-import { profileAvatar } from '@/constants/profile';
+import ImagesAvatarsTaiy64 from '@/images/avatars/taiy_64.png';
 import { clsx } from '@/utils/clsx';
 
 export default function CommonFooter() {
@@ -47,12 +48,10 @@ export default function CommonFooter() {
               `)}
             >
               <picture>
-                <img
-                  src={profileAvatar}
+                <NextImage
+                  src={ImagesAvatarsTaiy64}
                   alt='taiyのアイコン'
-                  width={32}
-                  height={32}
-                  loading='lazy'
+                  priority={false}
                   className='pointer-events-none size-full select-none'
                 />
               </picture>
