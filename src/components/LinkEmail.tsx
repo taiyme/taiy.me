@@ -46,7 +46,7 @@ export default function LinkEmail({ user, domain }: LinkEmailProps) {
             active:underline
           `)}
         >
-          表示する
+          クリックで表示
         </button>
       )}
     </span>
