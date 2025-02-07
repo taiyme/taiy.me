@@ -13,7 +13,7 @@
     "dev": "next dev -p 8080",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "start": "next start"
+    "start": "next start -p 8080"
   },
   "dependencies": {
     "@tabler/icons-react": "3.29.0",
