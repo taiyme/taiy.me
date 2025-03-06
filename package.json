@@ -16,47 +16,39 @@
     "start": "next start -p 8080"
   },
   "dependencies": {
-    "@tabler/icons-react": "3.29.0",
-    "next": "15.1.6",
+    "@tabler/icons-react": "3.31.0",
+    "next": "15.2.1",
     "next-view-transitions": "0.3.4",
     "punycode": "2.3.1",
-    "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "react": "catalog:react_v18",
+    "react-dom": "catalog:react_v18"
   },
   "devDependencies": {
-    "@eslint/compat": "1.2.6",
-    "@next/eslint-plugin-next": "15.1.6",
-    "@tailwindcss/container-queries": "0.1.1",
-    "@taiyme/eslint-config": "0.7.0",
+    "@eslint/compat": "1.2.7",
+    "@next/eslint-plugin-next": "15.2.1",
+    "@tailwindcss/container-queries": "catalog:tailwindcss_v3",
+    "@taiyme/eslint-config": "0.9.0",
     "@total-typescript/ts-reset": "0.6.1",
     "@types/eslint-config-prettier": "6.11.3",
-    "@types/eslint__js": "8.42.3",
-    "@types/node": "22.13.1",
+    "@types/node": "22.13.9",
     "@types/punycode": "2.1.4",
-    "@types/react": "18.3.12",
-    "@types/react-dom": "18.3.5",
-    "@typescript-eslint/parser": "8.23.0",
-    "eslint": "9.19.0",
-    "eslint-config-flat-gitignore": "2.0.0",
-    "eslint-config-next": "15.1.6",
-    "eslint-plugin-tailwindcss": "3.18.0",
-    "globals": "15.14.0",
-    "postcss": "8.5.1",
+    "@types/react": "catalog:react_v18",
+    "@types/react-dom": "catalog:react_v18",
+    "@typescript-eslint/parser": "8.26.0",
+    "eslint": "9.21.0",
+    "eslint-config-flat-gitignore": "2.1.0",
+    "eslint-config-next": "15.2.1",
+    "eslint-plugin-tailwindcss": "catalog:tailwindcss_v3",
+    "globals": "16.0.0",
+    "jiti": "2.4.2",
+    "postcss": "8.5.3",
     "postcss-load-config": "6.0.1",
-    "tailwindcss": "3.4.17",
-    "typescript": "5.7.3"
+    "tailwindcss": "catalog:tailwindcss_v3",
+    "typescript": "5.8.2"
   },
-  "packageManager": "pnpm@9.15.5",
+  "packageManager": "pnpm@10.5.2",
   "engines": {
     "node": ">=22",
-    "pnpm": ">=9"
-  },
-  "pnpm": {
-    "overrides": {
-      "eslint": "$eslint"
-    },
-    "patchedDependencies": {
-      "eslint-plugin-tailwindcss@3.18.0": "patches/eslint-plugin-tailwindcss@3.18.0.patch"
-    }
+    "pnpm": ">=10"
   }
 }

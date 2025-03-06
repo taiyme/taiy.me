@@ -1,0 +1,17 @@
+catalogs:
+  react_v18:
+    react: ^18.3.1
+    react-dom: ^18.3.1
+    '@types/react': ^18.3.18
+    '@types/react-dom': ^18.3.5
+
+  tailwindcss_v3:
+    tailwindcss: ^3.4.17
+    eslint-plugin-tailwindcss: ^3.18.0
+    '@tailwindcss/container-queries': ^0.1.1
+
+onlyBuiltDependencies:
+  - sharp
+
+patchedDependencies:
+  eslint-plugin-tailwindcss@3.18.0: patches/eslint-plugin-tailwindcss@3.18.0.patch

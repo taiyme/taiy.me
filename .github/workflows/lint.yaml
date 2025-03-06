@@ -9,6 +9,13 @@ on:
     branches:
       - main
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.number || github.sha }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
 jobs:
   pre-checkout:
     name: Pre checkout
@@ -24,19 +31,19 @@ jobs:
       eslint-cache-path: ${{ github.workspace }}/node_modules/.cache/eslint
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           persist-credentials: false
           ref: ${{ needs.pre-checkout.outputs.sha }}
           fetch-depth: 1
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@fe02b34f77f8bc703788d5817da081398fad5dd2 # v4.0.0
+        uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda # v4.1.0
         with:
           run_install: false
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4.2.0
+        uses: actions/setup-node@1d0ff469b7ec7b3cb9d8673fde0c81c44821de2a # v4.2.0
         with:
           node-version-file: .node-version
           cache: pnpm
@@ -46,7 +53,7 @@ jobs:
           pnpm install --frozen-lockfile
 
       - name: Restore eslint cache
-        uses: actions/cache@v4.2.0
+        uses: actions/cache@d4323d4df104b026a6aa633fdb11d772146be0bf # v4.2.2
         with:
           path: ${{ env.eslint-cache-path }}
           key: eslint-${{ env.eslint-cache-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ needs.pre-checkout.outputs.sha }}
@@ -54,4 +61,7 @@ jobs:
 
       - name: Run eslint
         run: |
-          pnpm lint --cache --cache-location ${{ env.eslint-cache-path }} --cache-strategy content
+          pnpm run lint \
+            --cache \
+            --cache-location '${{ env.eslint-cache-path }}' \
+            --cache-strategy content

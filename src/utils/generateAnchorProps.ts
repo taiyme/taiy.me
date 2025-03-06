@@ -31,14 +31,14 @@ type GenerateAnchorPropsResult = Readonly<
 
 export const generateAnchorProps = <T extends GenerateAnchorPropsProps>({ children, href, author, me, sponsored, ...props }: T) => {
   const { resolvedUrl, isExternalUrl } = resolveUrl(href);
-  const rel = Object.entries(({
+  const rel = Object.entries({
     noopener: isExternalUrl,
     noreferrer: isExternalUrl && !sponsored,
     external: isExternalUrl,
     author,
     me,
     sponsored,
-  })).flatMap(([k, v]) => v ? [k] : []).join(' ') || undefined;
+  }).flatMap(([k, v]) => (v ? [k] : [])).join(' ') || undefined;
   const target = isExternalUrl ? '_blank' : undefined;
 
   return {
