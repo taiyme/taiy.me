@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@tabler/icons-react": "3.31.0",
-    "next": "15.2.1",
+    "next": "15.2.2",
     "next-view-transitions": "0.3.4",
     "punycode": "2.3.1",
     "react": "catalog:react_v18",
@@ -25,19 +25,19 @@
   },
   "devDependencies": {
     "@eslint/compat": "1.2.7",
-    "@next/eslint-plugin-next": "15.2.1",
+    "@next/eslint-plugin-next": "15.2.2",
     "@tailwindcss/container-queries": "catalog:tailwindcss_v3",
-    "@taiyme/eslint-config": "0.9.0",
+    "@taiyme/eslint-config": "0.10.0",
     "@total-typescript/ts-reset": "0.6.1",
     "@types/eslint-config-prettier": "6.11.3",
-    "@types/node": "22.13.9",
+    "@types/node": "22.13.10",
     "@types/punycode": "2.1.4",
     "@types/react": "catalog:react_v18",
     "@types/react-dom": "catalog:react_v18",
-    "@typescript-eslint/parser": "8.26.0",
-    "eslint": "9.21.0",
+    "@typescript-eslint/parser": "8.26.1",
+    "eslint": "9.22.0",
     "eslint-config-flat-gitignore": "2.1.0",
-    "eslint-config-next": "15.2.1",
+    "eslint-config-next": "15.2.2",
     "eslint-plugin-tailwindcss": "catalog:tailwindcss_v3",
     "globals": "16.0.0",
     "jiti": "2.4.2",
@@ -46,9 +46,9 @@
     "tailwindcss": "catalog:tailwindcss_v3",
     "typescript": "5.8.2"
   },
-  "packageManager": "pnpm@10.5.2",
+  "packageManager": "pnpm@10.6.2",
   "engines": {
-    "node": ">=22",
-    "pnpm": ">=10"
+    "node": ">=22.0.0",
+    "pnpm": ">=10.6.0"
   }
 }
