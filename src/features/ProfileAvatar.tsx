@@ -13,6 +13,7 @@ export default function ProfileAvatar() {
         overflow-clip
         rounded-full
         shadow-xl
+        [view-transition-name:profile-avatar]
         @md/profile:size-56
       `)}
     >
