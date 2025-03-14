@@ -1,6 +1,5 @@
-// @ts-check
+import type { NextConfig } from 'next';
 
-/** @type {import('next').NextConfig} */
 export default {
   experimental: {
     typedRoutes: true,
@@ -19,4 +18,4 @@ export default {
       },
     ];
   },
-};
+} as const satisfies NextConfig;
