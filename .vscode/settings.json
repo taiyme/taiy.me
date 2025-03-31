@@ -7,6 +7,9 @@
     "source.removeUnusedImports": "never",
     "source.sortImports": "never",
   },
+  "editor.quickSuggestions": {
+    "strings": "on",
+  },
   "eslint.useFlatConfig": true,
   "eslint.validate": [
     "javascript",

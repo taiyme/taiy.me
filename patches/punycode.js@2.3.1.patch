@@ -1,0 +1,78 @@
+diff --git a/package.json b/package.json
+index 77947985162c3902d24eae4d70b0b50d7ac26119..fdd56e01b526111b576296e09b029694dc340522 100644
+--- a/package.json
++++ b/package.json
+@@ -3,9 +3,15 @@
+   "version": "2.3.1",
+   "description": "A robust Punycode converter that fully complies to RFC 3492 and RFC 5891, and works on nearly all JavaScript platforms.",
+   "homepage": "https://mths.be/punycode",
+-  "main": "punycode.js",
+-  "jsnext:main": "punycode.es6.js",
+-  "module": "punycode.es6.js",
++  "type": "module",
++  "exports": {
++    ".": {
++      "import": "./punycode.js",
++      "types": "./punycode.d.ts"
++    }
++  },
++  "main": "./punycode.js",
++  "types": "./punycode.d.ts",
+   "engines": {
+     "node": ">=6"
+   },
+@@ -36,8 +42,8 @@
+   "bugs": "https://github.com/mathiasbynens/punycode.js/issues",
+   "files": [
+     "LICENSE-MIT.txt",
+-    "punycode.js",
+-    "punycode.es6.js"
++    "punycode.d.ts",
++    "punycode.js"
+   ],
+   "scripts": {
+     "test": "mocha tests",
+@@ -47,12 +53,5 @@
+     "codecov": "^3.8.3",
+     "nyc": "^15.1.0",
+     "mocha": "^10.2.0"
+-  },
+-  "jspm": {
+-    "map": {
+-      "./punycode.js": {
+-        "node": "@node/punycode"
+-      }
+-    }
+   }
+ }
+diff --git a/punycode.d.ts b/punycode.d.ts
+new file mode 100644
+index 0000000000000000000000000000000000000000..6e7a6aa7409198e793a9461edde5f1f1be223544
+--- /dev/null
++++ b/punycode.d.ts
+@@ -0,0 +1,11 @@
++export function decode(input: string): string;
++export function encode(input: string): string;
++export function toUnicode(input: string): string;
++export function toASCII(input: string): string;
++
++export namespace ucs2 {
++    function decode(string: string): number[];
++    function encode(array: readonly number[]): string;
++}
++
++export const version: string;
+diff --git a/punycode.es6.js b/punycode.es6.js
+deleted file mode 100644
+index dadece25b35f595d717ec52adfc94d23d3b1edda..0000000000000000000000000000000000000000
+diff --git a/punycode.js b/punycode.js
+index a1ef251924c81e2cf620132f7765058c690eeb6e..dadece25b35f595d717ec52adfc94d23d3b1edda 100644
+--- a/punycode.js
++++ b/punycode.js
+@@ -440,4 +440,5 @@ const punycode = {
+ 	'toUnicode': toUnicode
+ };
+ 
+-module.exports = punycode;
++export { ucs2decode, ucs2encode, decode, encode, toASCII, toUnicode };
++export default punycode;

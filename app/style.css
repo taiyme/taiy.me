@@ -1,0 +1,67 @@
+@import "tailwindcss" source("../app");
+
+@theme {
+  --font-sans: TaiymeEN, TaiymeCJK, sans-serif;
+
+  --animate-bounce-right: bounce-right 2s infinite;
+
+  @keyframes bounce-right {
+    0%, 100% {
+      transform: none;
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: translateX(25%);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+}
+
+@custom-variant hover-active-without-focus {
+  @media (hover: hover) {
+    &:hover:not(*:focus-visible) {
+      @slot;
+    }
+  }
+
+  &:active:not(*:focus-visible) {
+    @slot;
+  }
+}
+
+@custom-variant hover-focus-active {
+  @media (hover: hover) {
+    &:hover {
+      @slot;
+    }
+  }
+
+  &:focus-visible,
+  &:active {
+    @slot;
+  }
+}
+
+@font-face {
+  font-family: TaiymeEN;
+  font-weight: 100 500;
+  src: local("HelveticaNeue"), local("ArialMT");
+}
+
+@font-face {
+  font-family: TaiymeEN;
+  font-weight: 600 900;
+  src: local("HelveticaNeue-Bold"), local("Arial-BoldMT");
+}
+
+@font-face {
+  font-family: TaiymeCJK;
+  font-weight: 100 500;
+  src: local("HiraginoSans-W3"), local("HiraKakuProN-W3"), local("BIZ-UDPGothic"), local("Meiryo");
+}
+
+@font-face {
+  font-family: TaiymeCJK;
+  font-weight: 600 900;
+  src: local("HiraginoSans-W6"), local("HiraKakuProN-W6"), local("BIZ-UDPGothic-Bold"), local("Meiryo-Bold");
+}

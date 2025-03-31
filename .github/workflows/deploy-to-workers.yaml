@@ -1,0 +1,73 @@
+name: Deploy to Cloudflare Workers
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  pre-checkout:
+    name: Pre checkout
+    uses: ./.github/workflows/pre-checkout.yaml
+
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-22.04
+    needs:
+      - pre-checkout
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+          ref: ${{ needs.pre-checkout.outputs.sha }}
+          fetch-depth: 1
+
+      - name: Set wrangler.jsonc
+        env:
+          WRANGLER_WORKER_NAME: ${{ secrets.WRANGLER_WORKER_NAME }}
+          WRANGLER_CUSTOM_DOMAIN: ${{ secrets.WRANGLER_CUSTOM_DOMAIN }}
+        run: |
+          cp wrangler.example.jsonc wrangler.jsonc
+          sed -i "s/<YOUR_WORKER_NAME>/${WRANGLER_WORKER_NAME}/g" wrangler.jsonc
+          sed -i "s/<YOUR_CUSTOM_DOMAIN>/${WRANGLER_CUSTOM_DOMAIN}/g" wrangler.jsonc
+
+      - name: Set environment variables
+        env:
+          VITE_SITE_URL: ${{ secrets.VITE_SITE_URL }}
+        run: |
+          touch .env.production
+          echo "VITE_SITE_URL=${VITE_SITE_URL}" >> .env.production
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda # v4.1.0
+        with:
+          run_install: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@1d0ff469b7ec7b3cb9d8673fde0c81c44821de2a # v4.2.0
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+
+      - name: Install dependencies
+        run: |
+          pnpm install --frozen-lockfile
+
+      - name: Build
+        run: |
+          pnpm run build
+
+      - name: Deploy to Cloudflare Worker
+        uses: cloudflare/wrangler-action@da0e0dfe58b7a431659754fdf3f186c529afbe65 # v3.14.1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
