@@ -4,18 +4,19 @@ taiyのサイトのソースコードです。 <https://taiy.me/>
 
 ## 仕様
 
-- パッケージ管理
-  - mise <https://mise.jdx.dev/>
-  - pnpm <https://pnpm.io/>
+- パッケージマネージャー
+  - [mise](https://mise.jdx.dev/)
+  - [pnpm](https://pnpm.io/)
 - 言語
-  - TypeScript <https://www.typescriptlang.org/>
-  - Hono JSX <https://hono.dev/>
+  - [TypeScript](https://www.typescriptlang.org/)
+  - [Hono JSX](https://hono.dev/docs/guides/jsx)
 - フレームワーク
-  - Vite <https://vite.dev/>
-  - Hono / HonoX <https://hono.dev/>
-  - Tailwind CSS <https://tailwindcss.com/>
-- Linter
-  - ESLint <https://eslint.org/>
+  - [Vite](https://vite.dev/)
+  - [Hono](https://hono.dev/)
+  - [HonoX](https://github.com/honojs/honox)
+  - [Tailwind CSS](https://tailwindcss.com/)
+- リンター
+  - [ESLint](https://eslint.org/)
 
 ## 開発
 
