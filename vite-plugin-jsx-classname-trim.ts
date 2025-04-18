@@ -1,14 +1,56 @@
-import generate_ from '@babel/generator';
+import { generate } from '@babel/generator';
 import { parse } from '@babel/parser';
 import traverse_ from '@babel/traverse';
+import type { StringLiteral, TemplateElement } from '@babel/types';
 import type { Plugin } from 'vite';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const generate = ((generate_ as any).default ?? generate_) as typeof generate_;
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const traverse = ((traverse_ as any).default ?? traverse_) as typeof traverse_;
+// @ts-expect-error -- @babel/traverse is a CommonJS package.
+const traverse = (traverse_.default ?? traverse_) as typeof traverse_;
+
+function trimClassName<T extends string | undefined>(
+  str: T,
+  opt?: {
+    keepLeadingSpace?: boolean;
+    keepTrailingSpace?: boolean;
+  },
+) {
+  if (str == null || str === '') return str;
+
+  let result = str.replace(/\s+/g, ' ');
+
+  if (!opt?.keepLeadingSpace && result.startsWith(' ')) {
+    result = result.trimStart();
+  }
+
+  if (!opt?.keepTrailingSpace && result.endsWith(' ')) {
+    result = result.trimEnd();
+  }
+
+  return result;
+}
+
+function toStringLiteral<T extends TemplateElement | undefined>(node: T) {
+  if (node == null) return null;
+
+  const {
+    type: _type,
+    tail: _tail,
+    value,
+    ...rest
+  } = node;
+
+  if (value.cooked == null) return null;
+
+  return {
+    ...rest,
+    type: 'StringLiteral',
+    value: value.cooked,
+  } satisfies StringLiteral as StringLiteral;
+}
 
 export default function jsxClassnameTrim() {
+  const classNameAttributes = ['class', 'className'];
+
   return {
     name: 'vite-plugin-jsx-classname-trim',
     enforce: 'pre',
@@ -24,19 +66,68 @@ export default function jsxClassnameTrim() {
         JSXAttribute(path) {
           if (
             path.node.name.type === 'JSXIdentifier'
-            && (path.node.name.name === 'class' || path.node.name.name === 'className')
-            && path.node.value?.type === 'JSXExpressionContainer'
-            && path.node.value.expression.type === 'TemplateLiteral'
-            && path.node.value.expression.quasis[0]?.type === 'TemplateElement'
-            && path.node.value.expression.expressions.length === 0
+            && classNameAttributes.includes(path.node.name.name)
           ) {
-            const { cooked = '' } = path.node.value.expression.quasis[0].value;
-            const cleanedClassName = cooked.split(/\s+/).filter((x) => x !== '').join(' ');
+            // className="..."
+            if (path.node.value?.type === 'StringLiteral') {
+              path.node.value = {
+                ...path.node.value,
+                value: trimClassName(path.node.value.value),
+              } satisfies StringLiteral;
+              return;
+            }
 
-            path.node.value = {
-              type: 'StringLiteral',
-              value: cleanedClassName,
-            };
+            // className={...}
+            if (path.node.value?.type === 'JSXExpressionContainer') {
+              const { expression: exprItem } = path.node.value;
+
+              // className={"..."}
+              if (exprItem.type === 'StringLiteral') {
+                path.node.value = {
+                  ...exprItem,
+                  value: trimClassName(exprItem.value),
+                } satisfies StringLiteral;
+                return;
+              }
+
+              // className={`...`}
+              if (
+                exprItem.type === 'TemplateLiteral'
+                && exprItem.quasis.length === 1
+              ) {
+                const strItem = toStringLiteral(exprItem.quasis[0]);
+
+                if (strItem?.type === 'StringLiteral') {
+                  path.node.value = {
+                    ...strItem,
+                    value: trimClassName(strItem.value),
+                  } satisfies StringLiteral;
+                  return;
+                }
+              }
+
+              // className={`${...}`}
+              if (
+                exprItem.type === 'TemplateLiteral'
+                && exprItem.quasis.length > 1
+              ) {
+                exprItem.quasis = exprItem.quasis.map((quasiItem, index) => {
+                  const trimOption = {
+                    keepLeadingSpace: index !== 0,
+                    keepTrailingSpace: !quasiItem.tail,
+                  };
+
+                  return {
+                    ...quasiItem,
+                    value: {
+                      raw: trimClassName(quasiItem.value.raw, trimOption),
+                      cooked: trimClassName(quasiItem.value.cooked, trimOption),
+                    },
+                  } satisfies TemplateElement;
+                });
+                return;
+              }
+            }
           }
         },
       });
