@@ -15,7 +15,7 @@ overrides:
 
 patchedDependencies:
   punycode.js@2.3.1:
-    hash: b77c588ee18bb3aa8d52ebd7471b9a3ab2d8d4107074e3d7005f2084b8797189
+    hash: 20ec06028328ceeeb564cf6a719ac88c5b429adf4ba036babbbaa7d34a285530
     path: patches/punycode.js@2.3.1.patch
 
 importers:
@@ -91,7 +91,7 @@ importers:
         version: 2.4.2
       punycode.js:
         specifier: 2.3.1
-        version: 2.3.1(patch_hash=b77c588ee18bb3aa8d52ebd7471b9a3ab2d8d4107074e3d7005f2084b8797189)
+        version: 2.3.1(patch_hash=20ec06028328ceeeb564cf6a719ac88c5b429adf4ba036babbbaa7d34a285530)
       tailwindcss:
         specifier: 4.0.17
         version: 4.0.17
@@ -4553,7 +4553,7 @@ snapshots:
       object-assign: 4.1.1
       react-is: 16.13.1
 
-  punycode.js@2.3.1(patch_hash=b77c588ee18bb3aa8d52ebd7471b9a3ab2d8d4107074e3d7005f2084b8797189): {}
+  punycode.js@2.3.1(patch_hash=20ec06028328ceeeb564cf6a719ac88c5b429adf4ba036babbbaa7d34a285530): {}
 
   punycode@2.3.1: {}
 
