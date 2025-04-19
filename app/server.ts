@@ -5,7 +5,12 @@ const app = createApp({
   init: (initApp) => {
     initApp.use(async (c, next) => {
       await next();
-      if (c.res.status === 404 && c.req.method === 'GET' && c.req.path !== '/' && c.req.path.endsWith('/')) {
+      if (
+        c.res.status === 404
+        && (c.req.method === 'GET' || c.req.method === 'HEAD')
+        && c.req.path !== '/'
+        && c.req.path.endsWith('/')
+      ) {
         const url = new URL(c.req.url);
         url.pathname = url.pathname.replace(/\/+$/, '');
         c.res = c.redirect(url.toString(), 308);
