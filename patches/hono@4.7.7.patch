@@ -1,0 +1,26 @@
+diff --git a/dist/cjs/jsx/base.js b/dist/cjs/jsx/base.js
+index 0418688c24a970a4b7ba5f50556c8b4c44f35242..4af27a420a923e4dc48933d6f7a69fc455d0d525 100644
+--- a/dist/cjs/jsx/base.js
++++ b/dist/cjs/jsx/base.js
+@@ -195,7 +195,7 @@ class JSXNode {
+       }
+     }
+     if (emptyTags.includes(tag) && children.length === 0) {
+-      buffer[0] += "/>";
++      buffer[0] += ">";
+       return;
+     }
+     buffer[0] += ">";
+diff --git a/dist/jsx/base.js b/dist/jsx/base.js
+index bc1098157f1366e0302bd9d981a45b5992e631ce..86890fac43bf012b935e70b89e0ceae07898477d 100644
+--- a/dist/jsx/base.js
++++ b/dist/jsx/base.js
+@@ -156,7 +156,7 @@ var JSXNode = class {
+       }
+     }
+     if (emptyTags.includes(tag) && children.length === 0) {
+-      buffer[0] += "/>";
++      buffer[0] += ">";
+       return;
+     }
+     buffer[0] += ">";
