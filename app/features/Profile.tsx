@@ -12,8 +12,12 @@ export default function Profile() {
   const c = useRequestContext();
   const currentPath = c.req.path;
 
-  const XHeading = currentPath === '/' ? 'h1' : 'div';
-  const XFooter = currentPath === '/' ? 'footer' : 'div';
+  const isSemantics = currentPath === '/';
+
+  const XHeadingGroup = isSemantics ? 'hgroup' : 'div';
+  const XHeading = isSemantics ? 'h1' : 'div';
+  const XParagraph = isSemantics ? 'p' : 'div';
+  const XFooter = isSemantics ? 'footer' : 'div';
 
   return (
     <div class='@container/profile grid w-full place-items-center gap-6'>
@@ -33,7 +37,7 @@ export default function Profile() {
           />
         </picture>
       </div>
-      <div class='row-span-2 grid w-full grid-rows-subgrid gap-1 text-center'>
+      <XHeadingGroup class='row-span-2 grid w-full grid-rows-subgrid gap-1 text-center'>
         <XHeading
           class={`
             text-2xl font-bold
@@ -42,10 +46,15 @@ export default function Profile() {
         >
           taiy
         </XHeading>
-        <div class='@md/profile:text-lg'>
-          <span class='text-gray-500'>a.k.a. taiyme</span>
-        </div>
-      </div>
+        <XParagraph
+          class={`
+            text-gray-500
+            @md/profile:text-lg
+          `}
+        >
+          a.k.a. taiyme
+        </XParagraph>
+      </XHeadingGroup>
       <div class='-my-2 grid grid-flow-col gap-2'>
         <LinkIcon
           href='https://u.taiy.me/fedi'
