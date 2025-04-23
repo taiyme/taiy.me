@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <article class='flex flex-col gap-8'>
+    <article class='space-y-8'>
       <header class='space-y-3'>
         <PageHeading level={1} isPageTitle>taiyについて</PageHeading>
         <p class='leading-relaxed'>音声作品と音ゲー、たまにプログラミング。</p>

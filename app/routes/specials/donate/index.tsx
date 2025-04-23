@@ -13,7 +13,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <article class='flex flex-col gap-8'>
+    <article class='space-y-8'>
       <header class='space-y-3'>
         <PageHeading level={1} isPageTitle>taiyを支援する</PageHeading>
         <p class='leading-relaxed'>taiy個人、または関連するプロジェクトを応援したい場合は、支援をご検討ください。</p>

@@ -14,7 +14,7 @@ export default function CommonFooter() {
           <a
             href='/'
             class={`
-              -mx-2.5 flex items-center gap-2 rounded-full px-2.5 py-1.5 text-sm
+              -mx-2.5 grid grid-flow-col place-items-center gap-2 rounded-full px-2.5 py-1.5 text-sm
               focus-visible:ring-2 focus-visible:ring-blue-500/50 focus-visible:outline-hidden
               motion-safe:transition-colors
               hover-active-without-focus:bg-black/5

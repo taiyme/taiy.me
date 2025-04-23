@@ -16,7 +16,7 @@ export default function Profile() {
   const XFooter = currentPath === '/' ? 'footer' : 'div';
 
   return (
-    <div class='@container/profile flex w-full flex-col items-center gap-6'>
+    <div class='@container/profile grid w-full place-items-center gap-6'>
       <div
         class={`
           aspect-square size-48 overflow-clip rounded-full shadow-xl select-none
@@ -33,7 +33,7 @@ export default function Profile() {
           />
         </picture>
       </div>
-      <div class='flex flex-col items-center gap-1'>
+      <div class='row-span-2 grid w-full grid-rows-subgrid gap-1 text-center'>
         <XHeading
           class={`
             text-2xl font-bold
@@ -46,7 +46,7 @@ export default function Profile() {
           <span class='text-gray-500'>a.k.a. taiyme</span>
         </div>
       </div>
-      <div class='-my-2 flex gap-2'>
+      <div class='-my-2 grid grid-flow-col gap-2'>
         <LinkIcon
           href='https://u.taiy.me/fedi'
           external
@@ -67,7 +67,7 @@ export default function Profile() {
           aria-label='taiyを支援する'
         />
       </div>
-      <XFooter class='flex flex-col gap-4'>
+      <XFooter class='row-span-2 grid w-full grid-rows-subgrid gap-4 text-center'>
         <div class='text-center'>
           <LinkButton
             to='/about'

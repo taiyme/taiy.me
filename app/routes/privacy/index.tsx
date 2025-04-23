@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <article class='flex flex-col gap-8'>
+    <article class='space-y-8'>
       <header class='space-y-3'>
         <PageHeading level={1} isPageTitle>プライバシーポリシー</PageHeading>
         <p class='leading-relaxed'>taiy.me（以下「当サイト」といいます。）は、プライバシーの保護を最重視し、以下のとおりプライバシーポリシー（以下「本ポリシー」といいます。）を定め、その適切な取扱いに努めます。</p>

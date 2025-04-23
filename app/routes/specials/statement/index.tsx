@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <article class='flex flex-col gap-6'>
+    <article class='space-y-6'>
       <header class='space-y-6'>
         <div
           class={`
