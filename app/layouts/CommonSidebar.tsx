@@ -4,8 +4,7 @@ export default function CommonSidebar() {
   return (
     <header
       class={`
-        sticky top-0 row-span-2 hidden h-dvh w-[30cqw] max-w-96 overflow-x-clip overflow-y-hidden border-r
-        border-r-gray-200
+        sticky top-0 row-span-2 hidden h-dvh w-[30cqw] max-w-96 overflow-x-clip overflow-y-hidden
         @5xl/layout:block
       `}
     >
