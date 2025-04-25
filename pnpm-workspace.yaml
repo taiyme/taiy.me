@@ -15,3 +15,4 @@ overrides:
   '@types/babel__generator': $@types/babel__generator
   '@types/babel__traverse': $@types/babel__traverse
   '@typescript-eslint/typescript-estree': $@typescript-eslint/typescript-estree
+  'esbuild': $esbuild
