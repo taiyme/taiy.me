@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2020-2024 Paweł Kuna
+// SPDX-License-Identifier: MIT
+
 import type { IconBaseProps } from '@/types/icon';
 
 type Props = Readonly<

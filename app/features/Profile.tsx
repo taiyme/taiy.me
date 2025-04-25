@@ -1,8 +1,8 @@
 import { useRequestContext } from 'hono/jsx-renderer';
 
 import IconBrandGithubFilled from '@/components/IconBrandGithubFilled';
-import IconPigMoney from '@/components/IconPigMoney';
-import IconWorld from '@/components/IconWorld';
+import IconBrandMisskeyFilled from '@/components/IconBrandMisskeyFilled';
+import IconHeartHandshake from '@/components/IconHeartHandshake';
 import LinkButton from '@/components/LinkButton';
 import LinkIcon from '@/components/LinkIcon';
 import LinkText from '@/components/LinkText';
@@ -59,9 +59,8 @@ export default function Profile() {
         <LinkIcon
           href='https://u.taiy.me/fedi'
           external
-          me
-          icon={IconWorld}
-          aria-label='taiyのFediverseを見る'
+          icon={IconBrandMisskeyFilled}
+          aria-label='taiyのMisskeyを見る'
         />
         <LinkIcon
           href='https://github.com/taiyme'
@@ -72,7 +71,7 @@ export default function Profile() {
         />
         <LinkIcon
           to='/specials/donate'
-          icon={IconPigMoney}
+          icon={IconHeartHandshake}
           aria-label='taiyを支援する'
         />
       </div>
