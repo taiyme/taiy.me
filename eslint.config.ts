@@ -2,7 +2,7 @@ import taiymeConfig from '@taiyme/eslint-config';
 import tsEslintParser from '@typescript-eslint/parser';
 import type { Linter } from 'eslint';
 import gitignore from 'eslint-config-flat-gitignore';
-import readableTailwindPlugin from 'eslint-plugin-readable-tailwind';
+import betterTailwindcssPlugin from 'eslint-plugin-better-tailwindcss';
 
 const files = ['**/*.{js,jsx,ts,tsx}'];
 
@@ -30,16 +30,16 @@ export default [
     name: 'taiy.me/tailwindcss',
     files,
     plugins: {
-      'readable-tailwind': readableTailwindPlugin,
+      'better-tailwindcss': betterTailwindcssPlugin,
     },
     settings: {
-      'readable-tailwind': {
+      'better-tailwindcss': {
         entryPoint: './app/style.css',
       },
     },
     rules: {
-      ...readableTailwindPlugin.configs.warning.rules,
-      'readable-tailwind/multiline': ['warn', { printWidth: 120 }],
+      ...betterTailwindcssPlugin.configs.recommended?.rules,
+      'better-tailwindcss/multiline': ['warn', { printWidth: 120 }],
     },
   },
 ] as const satisfies Linter.Config[];
