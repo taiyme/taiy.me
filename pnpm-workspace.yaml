@@ -1,11 +1,8 @@
 onlyBuiltDependencies:
+  - '@tailwindcss/oxide'
   - esbuild
   - sharp
   - workerd
-
-patchedDependencies:
-  hono@4.7.11: patches/hono@4.7.11.patch
-  punycode.js@2.3.1: patches/punycode.js@2.3.1.patch
 
 overrides:
   '@babel/generator': $@babel/generator
@@ -15,4 +12,8 @@ overrides:
   '@types/babel__generator': $@types/babel__generator
   '@types/babel__traverse': $@types/babel__traverse
   '@typescript-eslint/typescript-estree': $@typescript-eslint/typescript-estree
-  'esbuild': $esbuild
+  esbuild: $esbuild
+
+patchedDependencies:
+  hono@4.7.11: patches/hono@4.7.11.patch
+  punycode.js@2.3.1: patches/punycode.js@2.3.1.patch
