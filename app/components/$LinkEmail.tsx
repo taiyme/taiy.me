@@ -31,7 +31,7 @@ export default function LinkEmail({ user, domain }: Props) {
     <button
       onClick={onClick}
       class={`
-        rounded-[2px] text-blue-600
+        cursor-pointer rounded-[2px] text-blue-600
         focus-visible:ring-2 focus-visible:ring-blue-500/50 focus-visible:outline-hidden
         hover-active-without-focus:underline
       `}
