@@ -17,6 +17,7 @@ function trimClassName<T extends string | undefined>(
   if (str == null || str === '') return str;
 
   let result = str.replace(/\s+/g, ' ');
+  result = result.replace(/"/g, '&quot;');
 
   if (!opt?.keepLeadingSpace && result.startsWith(' ')) {
     result = result.trimStart();
