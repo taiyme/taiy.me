@@ -24,4 +24,5 @@
   },
   "html.completion.attributeDefaultValue": "singlequotes",
   "tailwindCSS.validate": true,
+  "tailwindCSS.classFunctions": ["tv"],
 }
