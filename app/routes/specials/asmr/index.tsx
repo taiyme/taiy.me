@@ -224,7 +224,7 @@ export default function Page() {
             ちかちゃんとかなちゃんに、気持ちいい音を聴かせてもらったり、気持ちいいことをさせてもらったりするお話です。
           </p>
           <p class='leading-relaxed'>
-            姉妹店の<LinkText href='https://www.dlsite.com/maniax/dlaf/=/t/n/link/work/aid/taiyme/id/RJ277473.html' external sponsored>JK耳リフレ！</LinkText>もよろしくお願いします。
+            姉妹店の<LinkText href={generateDlafLink({ productId: 'RJ277473', salesArea: 'maniax' })} external sponsored>JK耳リフレ！</LinkText>もよろしくお願いします。
           </p>
         </section>
         <section
