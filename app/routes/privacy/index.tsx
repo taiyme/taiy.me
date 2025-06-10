@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <article class='space-y-8'>
+    <article class='space-y-10'>
       <header class='space-y-3'>
         <PageHeading level={1} isPageTitle>
           プライバシーポリシー
