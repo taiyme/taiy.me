@@ -15,11 +15,17 @@ export default function Page() {
   return (
     <article class='space-y-8'>
       <header class='space-y-3'>
-        <PageHeading level={1} isPageTitle>taiyを支援する</PageHeading>
-        <p class='leading-relaxed'>taiy個人、または関連するプロジェクトを応援したい場合は、支援をご検討ください。</p>
+        <PageHeading level={1} isPageTitle>
+          taiyを支援する
+        </PageHeading>
+        <p class='leading-relaxed'>
+          taiy個人、または関連するプロジェクトを応援したい場合は、支援をご検討ください。
+        </p>
       </header>
       <section class='space-y-3'>
-        <PageHeading level={2}>支援方法</PageHeading>
+        <PageHeading level={2}>
+          支援方法
+        </PageHeading>
         <PageGrid>
           <DonateCard
             label={(
@@ -81,8 +87,12 @@ export default function Page() {
         </PageGrid>
       </section>
       <section class='space-y-3'>
-        <PageHeading level={2}>宛先</PageHeading>
-        <p class='leading-relaxed'>ギフトコードはDiscordかメールで送信してください。</p>
+        <PageHeading level={2}>
+          宛先
+        </PageHeading>
+        <p class='leading-relaxed'>
+          ギフトコードはDiscordかメールで送信してください。
+        </p>
         <ul class='list-disc pl-8'>
           <li>Discord: @taiy</li>
           <li>メールアドレス: <LinkEmail user='me' domain='taiy.me' /></li>

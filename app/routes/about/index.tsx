@@ -14,29 +14,50 @@ export default function Page() {
   return (
     <article class='space-y-8'>
       <header class='space-y-3'>
-        <PageHeading level={1} isPageTitle>taiyについて</PageHeading>
-        <p class='leading-relaxed'>音声作品と音ゲー、たまにプログラミング。</p>
-        <p class='leading-relaxed'>taiyの正式な発音は「たいいー」です。<LinkText to='/specials/statement' aria-label='taiyの発音に関する公式声明を見る'>詳細はこちら</LinkText></p>
+        <PageHeading level={1} isPageTitle>
+          taiyについて
+        </PageHeading>
+        <p class='leading-relaxed'>
+          音声作品と音ゲー、たまにプログラミング。
+        </p>
+        <p class='leading-relaxed'>
+          taiyの正式な発音は「たいいー」です。<LinkText to='/specials/statement' aria-label='taiyの発音に関する公式声明を見る'>詳細はこちら</LinkText>
+        </p>
       </header>
       <section class='space-y-3'>
-        <PageHeading level={2}>このサイトについて</PageHeading>
-        <p class='leading-relaxed'>taiy.meというドメインは2020年に取得していましたが、2024年になってようやくこのサイトを爆誕させることになりました。</p>
-        <p class='leading-relaxed'>HonoX + Tailwind CSS製です。TypeScriptとESLintを導入しています。</p>
+        <PageHeading level={2}>
+          このサイトについて
+        </PageHeading>
+        <p class='leading-relaxed'>
+          taiy.meというドメインは2020年に取得していましたが、2024年になってようやくこのサイトを爆誕させることになりました。
+        </p>
+        <p class='leading-relaxed'>
+          HonoX + Tailwind CSS製です。TypeScriptとESLintを導入しています。
+        </p>
       </section>
       <section class='space-y-3'>
-        <PageHeading level={2}>音ゲーについて</PageHeading>
-        <p class='leading-relaxed'>最近は<LinkText href='https://wds-stellarium.com/game/' external>ユメステ</LinkText>をプレイしています。2024年7月頃にプレイヤーレート1000を達成しました。</p>
-        <aside>
-          <h3 class='sr-only'>余談</h3>
-          <p class='leading-relaxed'>とりあえず『<LinkText href='https://www.youtube.com/watch?v=BVdrMRaxcdU' external>不可逆的運命ディストピア</LinkText>』と『<LinkText href='https://www.youtube.com/watch?v=e_N_24PrPTU' external>I Wanna</LinkText>』は神曲なので聴いてやってください。</p>
-        </aside>
+        <PageHeading level={2}>
+          音ゲーについて
+        </PageHeading>
+        <p class='leading-relaxed'>
+          最近は<LinkText href='https://wds-stellarium.com/game/' external>ユメステ</LinkText>をプレイしています。2024年7月頃にプレイヤーレート1000を達成しました。
+        </p>
+        <p class='leading-relaxed'>
+          とりあえず『<LinkText href='https://www.youtube.com/watch?v=BVdrMRaxcdU' external>不可逆的運命ディストピア</LinkText>』と『<LinkText href='https://www.youtube.com/watch?v=e_N_24PrPTU' external>I Wanna</LinkText>』は神曲なので聴いてやってください。
+        </p>
       </section>
       <section class='space-y-3'>
-        <PageHeading level={2}>音声作品について</PageHeading>
-        <p class='leading-relaxed'>人並みに音声作品を嗜んでおります。<LinkText to='/specials/asmr' aria-label='taiyがひたすら音声作品を紹介するページを見る'>ここでは多くは語りませんが</LinkText>、純愛が良いと思います。</p>
+        <PageHeading level={2}>
+          音声作品について
+        </PageHeading>
+        <p class='leading-relaxed'>
+          人並みに音声作品を嗜んでおります。<LinkText to='/specials/asmr' aria-label='taiyがひたすら音声作品を紹介するページを見る'>ここでは多くは語りませんが</LinkText>、純愛が良いと思います。
+        </p>
       </section>
       <section class='space-y-3'>
-        <PageHeading level={2}>作ったもの</PageHeading>
+        <PageHeading level={2}>
+          作ったもの
+        </PageHeading>
         <PageGrid>
           <AboutCard
             label={(

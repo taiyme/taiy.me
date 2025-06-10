@@ -14,9 +14,15 @@ const handler: NotFoundHandler = (c) => {
   return c.render(
     (
       <div class='space-y-3'>
-        <PageHeading level={1} isPageTitle>404 Not Found</PageHeading>
-        <p class='leading-relaxed'>ご指定のページが見つかりませんでした。</p>
-        <p class='leading-relaxed'>一時的にアクセスができない状態か、削除または移動された可能性があります。</p>
+        <PageHeading level={1} isPageTitle>
+          404 Not Found
+        </PageHeading>
+        <p class='leading-relaxed'>
+          ご指定のページが見つかりませんでした。
+        </p>
+        <p class='leading-relaxed'>
+          一時的にアクセスができない状態か、削除または移動された可能性があります。
+        </p>
       </div>
     ),
     { metadata },

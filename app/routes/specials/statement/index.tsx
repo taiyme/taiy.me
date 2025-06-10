@@ -32,13 +32,27 @@ export default function Page() {
         </h1>
       </header>
       <main class='space-y-4'>
-        <p class='leading-relaxed'>私の名前「taiy」に関して、近頃誤った発音によって誤解や混乱が生じていることについて、公式声明を発表させていただきます。</p>
-        <p class='leading-relaxed'>最初に、「taiy」は「たいいー」と発音するべきであることを明確に申し上げます。</p>
-        <p class='leading-relaxed'>この読み方は、私を私たらしめる重要な要素の1つであり、絶対に覆されてはならないものだと確信しております。</p>
-        <p class='leading-relaxed'>また、一部の方々が誤って「たいわい」と発音し、それを「たい猥」などと関連付け、誤解が広まってしまったことについて、深い遺憾の意を表明いたします。</p>
-        <p class='leading-relaxed'>この件に関しまして、法的手段を含め誤解の解消と名誉の回復に向けて必要な措置を検討し、適切な対応を取る覚悟でございます。</p>
-        <p class='leading-relaxed'>最後に、私は「taiy」の発音に関する正確な情報を共有し、誤解を解消するための努力を続けて参ります。</p>
-        <p class='leading-relaxed'>何かご質問やご疑義がございましたら、メール（<LinkEmail user='me' domain='taiy.me' />）へお問い合わせください。</p>
+        <p class='leading-relaxed'>
+          私の名前「taiy」に関して、近頃誤った発音によって誤解や混乱が生じていることについて、公式声明を発表させていただきます。
+        </p>
+        <p class='leading-relaxed'>
+          最初に、「taiy」は「たいいー」と発音するべきであることを明確に申し上げます。
+        </p>
+        <p class='leading-relaxed'>
+          この読み方は、私を私たらしめる重要な要素の1つであり、絶対に覆されてはならないものだと確信しております。
+        </p>
+        <p class='leading-relaxed'>
+          また、一部の方々が誤って「たいわい」と発音し、それを「たい猥」などと関連付け、誤解が広まってしまったことについて、深い遺憾の意を表明いたします。
+        </p>
+        <p class='leading-relaxed'>
+          この件に関しまして、法的手段を含め誤解の解消と名誉の回復に向けて必要な措置を検討し、適切な対応を取る覚悟でございます。
+        </p>
+        <p class='leading-relaxed'>
+          最後に、私は「taiy」の発音に関する正確な情報を共有し、誤解を解消するための努力を続けて参ります。
+        </p>
+        <p class='leading-relaxed'>
+          何かご質問やご疑義がございましたら、メール（<LinkEmail user='me' domain='taiy.me' />）へお問い合わせください。
+        </p>
       </main>
       <footer class='space-y-3'>
         <p class='text-right leading-relaxed'>以上</p>
