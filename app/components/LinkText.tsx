@@ -1,35 +1,60 @@
+import { tv, type VariantProps } from 'tailwind-variants';
+
 import IconExternalLink from '@/components/IconExternalLink';
 import ParseUrl from '@/components/ParseUrl';
 import type { LinkBasePropsWithChildren } from '@/types/link';
 import { generateLinkAttributes } from '@/utils/generateLinkAttributes';
 
+const slots = tv({
+  slots: {
+    anchorStyle: `
+      group/LinkText rounded-[2px] u-focus-ring
+      [line-break:anywhere]
+    `,
+    textStyle: 'group-hover-active-without-focus/LinkText:underline',
+  },
+  variants: {
+    variant: {
+      primary: {
+        anchorStyle: 'text-blue-600',
+      },
+      secondary: {
+        anchorStyle: 'text-gray-500',
+      },
+    },
+    external: {
+      true: {
+        textStyle: 'mr-[0.125em]',
+      },
+    },
+  },
+  defaultVariants: {
+    variant: 'primary',
+  },
+});
+
 type Props = Readonly<
   & LinkBasePropsWithChildren
-  & {
-    secondary?: boolean;
-  }
+  & Pick<
+    VariantProps<typeof slots>,
+    | 'variant'
+  >
 >;
 
-export default function LinkText({ children, secondary, ...linkProps }: Props) {
+export default function LinkText({ children, variant, ...linkProps }: Props) {
   const { linkAttrs, isExternalLink } = generateLinkAttributes(linkProps);
+
+  const { anchorStyle, textStyle } = slots({
+    variant,
+    external: isExternalLink,
+  });
 
   return (
     <a
       {...linkAttrs}
-      class={`
-        group/LinkText rounded-[2px] text-blue-600 u-focus-ring
-        [line-break:anywhere]
-        data-secondary:text-gray-500
-      `}
-      data-secondary={secondary || undefined}
-      data-external={isExternalLink || undefined}
+      class={anchorStyle()}
     >
-      <span
-        class={`
-          group-data-external/LinkText:mr-[0.125em]
-          group-hover-active-without-focus/LinkText:underline
-        `}
-      >
+      <span class={textStyle()}>
         {children ?? <ParseUrl href={linkAttrs.href} />}
       </span>
       {isExternalLink && (

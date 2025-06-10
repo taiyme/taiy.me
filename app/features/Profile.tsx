@@ -89,7 +89,7 @@ export default function Profile() {
             <p class='text-center text-sm leading-tight'>
               <LinkText
                 to='/'
-                secondary
+                variant='secondary'
               >
                 トップページ
               </LinkText>
@@ -98,7 +98,7 @@ export default function Profile() {
           <p class='text-center text-sm leading-tight'>
             <LinkText
               to='/privacy'
-              secondary
+              variant='secondary'
               privacyPolicy
             >
               プライバシーポリシー

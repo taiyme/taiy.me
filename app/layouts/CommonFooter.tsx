@@ -44,7 +44,7 @@ export default function CommonFooter() {
             <p class='text-sm leading-tight'>
               <LinkText
                 to='/privacy'
-                secondary
+                variant='secondary'
                 privacyPolicy
               >
                 プライバシーポリシー
