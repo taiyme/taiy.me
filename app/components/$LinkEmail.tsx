@@ -18,8 +18,7 @@ export default function LinkEmail({ user, domain }: Props) {
     <a
       href={`mailto:${email}`}
       class={`
-        rounded-[2px] text-blue-600
-        focus-visible:ring-2 focus-visible:ring-blue-500/50 focus-visible:outline-hidden
+        rounded-[2px] text-blue-600 u-focus-ring
         hover-active-without-focus:underline
       `}
     >
@@ -31,8 +30,7 @@ export default function LinkEmail({ user, domain }: Props) {
     <button
       onClick={onClick}
       class={`
-        cursor-pointer rounded-[2px] text-blue-600
-        focus-visible:ring-2 focus-visible:ring-blue-500/50 focus-visible:outline-hidden
+        cursor-pointer rounded-[2px] text-blue-600 u-focus-ring
         hover-active-without-focus:underline
       `}
     >

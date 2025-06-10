@@ -17,9 +17,8 @@ export default function LinkText({ children, secondary, ...linkProps }: Props) {
     <a
       {...linkAttrs}
       class={`
-        group/LinkText rounded-[2px] text-blue-600
+        group/LinkText rounded-[2px] text-blue-600 u-focus-ring
         [line-break:anywhere]
-        focus-visible:ring-2 focus-visible:ring-blue-500/50 focus-visible:outline-hidden
         data-secondary:text-gray-500
       `}
       data-secondary={secondary || undefined}

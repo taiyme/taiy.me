@@ -17,8 +17,7 @@ export default function LinkIcon({ icon: IconComponent, ...linkProps }: Props) {
     <a
       {...linkAttrs}
       class={`
-        inline-grid rounded-full p-2
-        focus-visible:ring-2 focus-visible:ring-blue-500/50 focus-visible:outline-hidden
+        inline-grid rounded-full p-2 u-focus-ring
         motion-safe:transition-colors
         hover-active-without-focus:bg-black/5
       `}

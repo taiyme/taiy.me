@@ -22,8 +22,7 @@ export default function DonateLinkCard({ label, description, recommended, ...lin
       {...linkAttrs}
       class={`
         group/DonateCard grid grid-cols-[1fr_auto] grid-rows-[auto_1fr] gap-1 rounded-2xl border border-gray-200 px-4
-        py-2.5
-        focus-visible:ring-2 focus-visible:ring-blue-500/50 focus-visible:outline-hidden
+        py-2.5 u-focus-ring
         motion-safe:transition-colors
         hover-active-without-focus:bg-black/5
         hover-focus-active:border-transparent

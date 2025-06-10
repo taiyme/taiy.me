@@ -42,6 +42,10 @@
   }
 }
 
+@utility u-focus-ring {
+  @apply focus-visible:ring-2 focus-visible:ring-blue-500/50 focus-visible:outline-hidden;
+}
+
 @font-face {
   font-family: TaiymeEN;
   font-weight: 100 500;
