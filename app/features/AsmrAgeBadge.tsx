@@ -1,6 +1,31 @@
-type Props = Readonly<{
-  type: 'general' | 'teen' | 'adult';
-}>;
+import { tv, type VariantProps } from 'tailwind-variants';
+import type { SetRequired } from 'type-fest';
+
+const slots = tv({
+  slots: {
+    badgeStyle: 'mr-1.5 inline-block rounded-[4px] p-1 align-text-bottom text-xs/none font-bold text-white select-none',
+  },
+  variants: {
+    type: {
+      general: {
+        badgeStyle: 'bg-[#82ca28]',
+      },
+      teen: {
+        badgeStyle: 'bg-[#82ca28]',
+      },
+      adult: {
+        badgeStyle: 'bg-[#ff5f96]',
+      },
+    },
+  },
+});
+
+type Props = Readonly<
+  SetRequired<
+    VariantProps<typeof slots>,
+    | 'type'
+  >
+>;
 
 export default function AsmrAgeBadge({ type }: Props) {
   const { ariaLabel, displayLabel } = (() => {
@@ -23,16 +48,13 @@ export default function AsmrAgeBadge({ type }: Props) {
     }
   })();
 
+  const { badgeStyle } = slots({ type });
+
   return (
     <span
       role='img'
       aria-label={ariaLabel}
-      data-type={type === 'adult' ? 'adult' : 'general'}
-      class={`
-        mr-1.5 inline-block rounded-[4px] p-1 align-text-bottom text-xs leading-none font-bold text-white select-none
-        data-[type=adult]:bg-[#ff5f96]
-        data-[type=general]:bg-[#82ca28]
-      `}
+      class={badgeStyle()}
     >
       {displayLabel}
     </span>
