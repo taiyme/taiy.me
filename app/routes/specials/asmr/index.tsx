@@ -1,5 +1,5 @@
+import HeadingText from '@/components/HeadingText';
 import LinkText from '@/components/LinkText';
-import { PageHeading } from '@/components/PageHeading';
 import AsmrSectionTitle from '@/features/AsmrSectionTitle';
 import type { Metadata } from '@/types/metadata';
 import { generateDlafLink } from '@/utils/generateDlafLink';
@@ -14,9 +14,9 @@ export default function Page() {
   return (
     <article class='space-y-10'>
       <header class='space-y-3'>
-        <PageHeading level={1} isPageTitle>
+        <HeadingText level={1}>
           おすすめの音声作品を紹介するだけ
-        </PageHeading>
+        </HeadingText>
         <p class='leading-relaxed'>
           taiyがひたすら音声作品を紹介するページです。アフィリエイトリンクを含みます。
         </p>

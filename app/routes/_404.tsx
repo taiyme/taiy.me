@@ -1,6 +1,6 @@
 import type { NotFoundHandler } from 'hono';
 
-import { PageHeading } from '@/components/PageHeading';
+import HeadingText from '@/components/HeadingText';
 import type { Metadata } from '@/types/metadata';
 
 const handler: NotFoundHandler = (c) => {
@@ -14,9 +14,9 @@ const handler: NotFoundHandler = (c) => {
   return c.render(
     (
       <div class='space-y-3'>
-        <PageHeading level={1} isPageTitle>
+        <HeadingText level={1}>
           404 Not Found
-        </PageHeading>
+        </HeadingText>
         <p class='leading-relaxed'>
           ご指定のページが見つかりませんでした。
         </p>

@@ -1,6 +1,6 @@
 import LinkEmail from '@/components/$LinkEmail';
+import HeadingText from '@/components/HeadingText';
 import PageGrid from '@/components/PageGrid';
-import { PageHeading } from '@/components/PageHeading';
 import DonateCard from '@/features/DonateCard';
 import DonateLinkCard from '@/features/DonateLinkCard';
 import type { Metadata } from '@/types/metadata';
@@ -15,17 +15,17 @@ export default function Page() {
   return (
     <article class='space-y-10'>
       <header class='space-y-3'>
-        <PageHeading level={1} isPageTitle>
+        <HeadingText level={1}>
           taiyを支援する
-        </PageHeading>
+        </HeadingText>
         <p class='leading-relaxed'>
           taiy個人、または関連するプロジェクトを応援したい場合は、支援をご検討ください。
         </p>
       </header>
       <section class='space-y-3'>
-        <PageHeading level={2}>
+        <HeadingText level={2}>
           支援方法
-        </PageHeading>
+        </HeadingText>
         <PageGrid>
           <DonateCard
             label={(
@@ -87,9 +87,9 @@ export default function Page() {
         </PageGrid>
       </section>
       <section class='space-y-3'>
-        <PageHeading level={2}>
+        <HeadingText level={2}>
           宛先
-        </PageHeading>
+        </HeadingText>
         <p class='leading-relaxed'>
           ギフトコードはDiscordかメールで送信してください。
         </p>

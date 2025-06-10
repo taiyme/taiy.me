@@ -1,6 +1,6 @@
+import HeadingText from '@/components/HeadingText';
 import LinkText from '@/components/LinkText';
 import PageGrid from '@/components/PageGrid';
-import { PageHeading } from '@/components/PageHeading';
 import AboutCard from '@/features/AboutCard';
 import type { Metadata } from '@/types/metadata';
 
@@ -14,9 +14,9 @@ export default function Page() {
   return (
     <article class='space-y-10'>
       <header class='space-y-3'>
-        <PageHeading level={1} isPageTitle>
+        <HeadingText level={1}>
           taiyについて
-        </PageHeading>
+        </HeadingText>
         <p class='leading-relaxed'>
           音声作品と音ゲー、たまにプログラミング。
         </p>
@@ -25,9 +25,9 @@ export default function Page() {
         </p>
       </header>
       <section class='space-y-3'>
-        <PageHeading level={2}>
+        <HeadingText level={2}>
           このサイトについて
-        </PageHeading>
+        </HeadingText>
         <p class='leading-relaxed'>
           taiy.meというドメインは2020年に取得していましたが、2024年になってようやくこのサイトを爆誕させることになりました。
         </p>
@@ -36,9 +36,9 @@ export default function Page() {
         </p>
       </section>
       <section class='space-y-3'>
-        <PageHeading level={2}>
+        <HeadingText level={2}>
           音ゲーについて
-        </PageHeading>
+        </HeadingText>
         <p class='leading-relaxed'>
           最近は<LinkText href='https://wds-stellarium.com/game/' external>ユメステ</LinkText>をプレイしています。2024年7月頃にプレイヤーレート1000を達成しました。
         </p>
@@ -47,17 +47,17 @@ export default function Page() {
         </p>
       </section>
       <section class='space-y-3'>
-        <PageHeading level={2}>
+        <HeadingText level={2}>
           音声作品について
-        </PageHeading>
+        </HeadingText>
         <p class='leading-relaxed'>
           人並みに音声作品を嗜んでおります。<LinkText to='/specials/asmr' aria-label='taiyがひたすら音声作品を紹介するページを見る'>ここでは多くは語りませんが</LinkText>、純愛が良いと思います。
         </p>
       </section>
       <section class='space-y-3'>
-        <PageHeading level={2}>
+        <HeadingText level={2}>
           作ったもの
-        </PageHeading>
+        </HeadingText>
         <PageGrid>
           <AboutCard
             label={(
