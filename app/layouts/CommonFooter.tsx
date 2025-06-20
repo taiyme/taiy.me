@@ -3,66 +3,82 @@ import { SITE_COPYRIGHT } from '@/constants/site';
 
 export default function CommonFooter() {
   return (
-    <footer
+    <div
       class={`
-        overflow-clip px-4 pt-6 pb-[max(5dvh,1.5rem)]
-        @5xl/layout:hidden
+        @container grid size-full grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] place-items-center px-4
+        pt-[calc(max(5dvh,1.5rem)/2)] pb-[max(5dvh,1.5rem)]
       `}
     >
-      <div class='@container/footer grid grid-cols-[1fr_auto_1fr] items-center'>
-        <div class='justify-self-end'>
-          <a
-            href='/'
+      <div class='justify-self-end'>
+        <a
+          href='/'
+          class={`
+            -mx-2.5 grid grid-flow-col place-items-center gap-1.5 rounded-full px-2.5 py-1.5 u-focus-ring
+            motion-safe:transition-colors
+            @sm:gap-2
+            hover-active-without-focus:bg-black/5
+          `}
+        >
+          <div
             class={`
-              -mx-2.5 grid grid-flow-col place-items-center gap-2 rounded-full px-2.5 py-1.5 text-sm u-focus-ring
-              motion-safe:transition-colors
-              hover-active-without-focus:bg-black/5
+              aspect-square size-7 overflow-clip rounded-full opacity-90 shadow-md select-none
+              @sm:size-8
             `}
           >
-            <div class='aspect-square size-8 overflow-clip rounded-full opacity-90 shadow-md select-none'>
-              <picture>
-                <img
-                  src='/images/avatars/taiy_64.png'
-                  alt='taiyのアイコン'
-                  loading='lazy'
-                  class='pointer-events-none size-full select-none'
-                />
-              </picture>
-            </div>
-            <div class='text-lg font-bold opacity-90'>taiy.me</div>
-          </a>
-        </div>
-        <div
-          aria-hidden='true'
-          class={`
-            h-full px-4
-            before:block before:size-full before:border-r before:border-r-gray-200
-          `}
-        />
-        <div class='justify-self-start'>
-          <div class='space-y-1'>
-            <p class='text-sm leading-tight'>
-              <LinkText
-                to='/privacy'
-                variant='secondary'
-                privacyPolicy
-              >
-                プライバシーポリシー
-              </LinkText>
-            </p>
-            <p class='text-sm leading-tight'>
-              <small
-                class={`
-                  text-[length:inherit]
-                  text-gray-500
-                `}
-              >
-                {SITE_COPYRIGHT}
-              </small>
-            </p>
+            <picture>
+              <img
+                src='/images/avatars/taiy_64.png'
+                alt='taiyのアイコン'
+                loading='lazy'
+                class='pointer-events-none size-full select-none'
+              />
+            </picture>
           </div>
+          <div
+            class={`
+              text-base/none font-bold opacity-90
+              @sm:text-lg/none
+            `}
+          >
+            <span translate='no'>taiy.me</span>
+          </div>
+        </a>
+      </div>
+      <div
+        aria-hidden='true'
+        class='mx-4 h-full border-r border-r-gray-200'
+      />
+      <div class='justify-self-start'>
+        <div
+          class={`
+            space-y-0.5
+            @sm:space-y-1
+          `}
+        >
+          <p
+            class={`
+              text-xs/tight
+              @sm:text-sm/tight
+            `}
+          >
+            <LinkText
+              to='/privacy'
+              variant='secondary'
+              privacyPolicy
+            >
+              プライバシーポリシー
+            </LinkText>
+          </p>
+          <p
+            class={`
+              text-xs/tight text-gray-500
+              @sm:text-sm/tight
+            `}
+          >
+            <span translate='no'>{SITE_COPYRIGHT}</span>
+          </p>
         </div>
       </div>
-    </footer>
+    </div>
   );
 }

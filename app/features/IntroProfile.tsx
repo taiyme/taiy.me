@@ -8,24 +8,28 @@ import LinkIcon from '@/components/LinkIcon';
 import LinkText from '@/components/LinkText';
 import { SITE_COPYRIGHT } from '@/constants/site';
 
-export default function Profile() {
+type Props = Readonly<{
+  semantics?: boolean;
+}>;
+
+export default function IntroProfile({ semantics }: Props) {
   const c = useRequestContext();
   const currentPath = c.req.path;
 
-  const isSemantics = currentPath === '/';
-
-  const XHeadingGroup = isSemantics ? 'hgroup' : 'div';
-  const XHeading = isSemantics ? 'h1' : 'div';
-  const XParagraph = isSemantics ? 'p' : 'div';
-  const XFooter = isSemantics ? 'footer' : 'div';
+  const XHeadingGroup = semantics ? 'hgroup' : 'div';
+  const XHeading = semantics ? 'h1' : 'div';
+  const XParagraph = semantics ? 'p' : 'div';
+  const XFooter = semantics ? 'footer' : 'div';
 
   return (
-    <div class='@container/profile grid w-full place-items-center gap-6'>
+    <div
+      class='@container grid w-full place-items-center gap-6 pb-[10dvh]'
+    >
       <div
         class={`
           aspect-square size-48 overflow-clip rounded-full shadow-xl select-none
-          [view-transition-name:profile-avatar]
-          @md/profile:size-56
+          [view-transition-name:layout-avatar]
+          @md:size-56
         `}
       >
         <picture>
@@ -37,25 +41,27 @@ export default function Profile() {
           />
         </picture>
       </div>
-      <XHeadingGroup class='row-span-2 grid w-full grid-rows-subgrid gap-1 text-center'>
+      <XHeadingGroup
+        class='row-span-2 grid w-full grid-rows-subgrid gap-3'
+      >
         <XHeading
           class={`
-            text-2xl font-bold
-            @md/profile:text-3xl
+            text-center text-2xl/none font-bold
+            @md:text-3xl/none
           `}
         >
-          taiy
+          <span translate='no'>taiy</span>
         </XHeading>
         <XParagraph
           class={`
-            text-gray-500
-            @md/profile:text-lg
+            text-center text-base/none text-gray-500
+            @md:text-lg/none
           `}
         >
-          a.k.a. taiyme
+          <span translate='no'>a.k.a. taiyme</span>
         </XParagraph>
       </XHeadingGroup>
-      <div class='-my-2 grid grid-flow-col gap-2'>
+      <div class='-my-1 grid grid-flow-col gap-2'>
         <LinkIcon
           href='https://u.taiy.me/fedi'
           external
@@ -75,8 +81,8 @@ export default function Profile() {
           aria-label='taiyを支援する'
         />
       </div>
-      <XFooter class='row-span-2 grid w-full grid-rows-subgrid gap-4 text-center'>
-        <div class='text-center'>
+      <XFooter class='row-span-2 grid w-full grid-rows-subgrid'>
+        <div class='-my-1 text-center'>
           <LinkButton
             to='/about'
             author
@@ -86,7 +92,7 @@ export default function Profile() {
         </div>
         <div class='space-y-1'>
           {currentPath !== '/' && (
-            <p class='text-center text-sm leading-tight'>
+            <p class='text-center text-sm/tight'>
               <LinkText
                 to='/'
                 variant='secondary'
@@ -95,7 +101,7 @@ export default function Profile() {
               </LinkText>
             </p>
           )}
-          <p class='text-center text-sm leading-tight'>
+          <p class='text-center text-sm/tight'>
             <LinkText
               to='/privacy'
               variant='secondary'
@@ -104,15 +110,8 @@ export default function Profile() {
               プライバシーポリシー
             </LinkText>
           </p>
-          <p class='text-center text-sm leading-tight'>
-            <small
-              class={`
-                text-[length:inherit]
-                text-gray-500
-              `}
-            >
-              {SITE_COPYRIGHT}
-            </small>
+          <p class='text-center text-sm/tight text-gray-500'>
+            <span translate='no'>{SITE_COPYRIGHT}</span>
           </p>
         </div>
       </XFooter>

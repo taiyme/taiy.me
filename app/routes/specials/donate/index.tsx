@@ -3,10 +3,9 @@ import HeadingText from '@/components/HeadingText';
 import PageGrid from '@/components/PageGrid';
 import DonateCard from '@/features/DonateCard';
 import DonateLinkCard from '@/features/DonateLinkCard';
-import type { Metadata } from '@/types/metadata';
+import type { Metadata } from '@/types/Metadata';
 
 export const metadata = {
-  path: '/specials/donate',
   title: 'taiyを支援する',
   description: 'taiyを支援する方法について掲載しています。',
 } as const satisfies Metadata;

@@ -15,6 +15,30 @@
       animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
     }
   }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+  }
+
+  @keyframes fade-out {
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes slide-from-right {
+    from {
+      transform: translateX(2rem);
+    }
+  }
+
+  @keyframes slide-to-left {
+    to {
+      transform: translateX(-2rem);
+    }
+  }
 }
 
 @custom-variant hover-active-without-focus {
@@ -40,6 +64,51 @@
   &:active {
     @slot;
   }
+}
+
+@layer base {
+  @view-transition {
+    navigation: auto;
+  }
+
+  ::view-transition-old(layout-content) {
+    animation:
+      90ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
+      300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
+  }
+
+  ::view-transition-new(layout-content) {
+    animation:
+      210ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
+      300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
+  }
+
+  @variant motion-reduce {
+    ::view-transition-group(*),
+    ::view-transition-old(*),
+    ::view-transition-new(*) {
+      animation: none !important;
+    }
+  }
+}
+
+@utility u-break-anywhere-strict {
+  @apply wrap-anywhere;
+  word-break: normal;
+  line-break: strict;
+}
+
+@utility u-font-smoothing {
+  @apply antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+@utility u-p-safe {
+  padding:
+    env(safe-area-inset-top)
+    env(safe-area-inset-right)
+    env(safe-area-inset-bottom)
+    env(safe-area-inset-left);
 }
 
 @utility u-focus-ring {

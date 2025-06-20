@@ -1,9 +1,8 @@
 import LinkEmail from '@/components/$LinkEmail';
 import HeadingText from '@/components/HeadingText';
-import type { Metadata } from '@/types/metadata';
+import type { Metadata } from '@/types/Metadata';
 
 export const metadata = {
-  path: '/privacy',
   title: 'プライバシーポリシー',
   description: 'taiyのサイトの個人情報の取扱いに関して掲載しています。',
 } as const satisfies Metadata;

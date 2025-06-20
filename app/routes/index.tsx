@@ -1,17 +1,18 @@
-import Profile from '@/features/Profile';
-import type { Metadata } from '@/types/metadata';
+import IntroProfile from '@/features/IntroProfile';
+import type { Metadata } from '@/types/Metadata';
 
 export const metadata = {
-  path: '/',
   title: 'taiy.me',
   description: 'taiyのサイトです。',
-  layoutType: 'commonSimple',
+  layoutType: 'zen',
 } as const satisfies Metadata;
 
 export default function Page() {
   return (
-    <div class='grid min-h-dvh w-full place-items-center px-4 pt-[max(5dvh,1.5rem)] pb-[max(15dvh,1.5rem)]'>
-      <Profile />
+    <div
+      class='grid size-full place-items-center'
+    >
+      <IntroProfile semantics />
     </div>
   );
 }

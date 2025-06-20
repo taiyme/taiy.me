@@ -1,6 +1,6 @@
 import type {} from 'hono';
 
-import type { Metadata } from '@/types/metadata';
+import type { Metadata } from '@/types/Metadata';
 
 declare module 'hono' {
   interface Env {

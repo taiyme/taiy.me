@@ -1,5 +1,6 @@
 import type { PropsWithChildren } from 'hono/jsx';
 
+import CommonContent from '@/layouts/CommonContent';
 import CommonFooter from '@/layouts/CommonFooter';
 import CommonSidebar from '@/layouts/CommonSidebar';
 
@@ -11,29 +12,33 @@ export default function CommonLayout({ children }: Props) {
   return (
     <div
       class={`
-        relative mx-auto grid min-h-dvh w-full max-w-3xl grid-cols-1 grid-rows-[1fr_auto]
-        @5xl/layout:max-w-7xl @5xl/layout:grid-cols-[auto_1fr] @5xl/layout:px-[3cqw]
+        relative mx-auto grid min-h-dvh w-full max-w-3xl grid-cols-1 grid-rows-[minmax(0,1fr)_auto]
+        @5xl:max-w-7xl @5xl:grid-cols-[auto_minmax(0,1fr)] @5xl:grid-rows-1 @5xl:px-[3cqw]
       `}
     >
-      <CommonSidebar />
-      <main
+      <header
         class={`
-          overflow-clip px-4 pt-[max(5dvh,1.5rem)] pb-6
-          @5xl/layout:pb-[max(5dvh,1.5rem)]
+          sticky top-0 row-span-2 hidden h-dvh w-[30cqw] max-w-96 overflow-x-clip overflow-y-hidden
+          @5xl:block
         `}
       >
-        <div class='@container/page'>
+        <CommonSidebar />
+      </header>
+      <main
+        class='overflow-clip'
+      >
+        <CommonContent>
           {children}
-        </div>
+        </CommonContent>
       </main>
-      <CommonFooter />
-      <div
-        aria-hidden='true'
+      <footer
         class={`
-          hidden
-          @5xl/layout:block
+          overflow-clip
+          @5xl:hidden
         `}
-      />
+      >
+        <CommonFooter />
+      </footer>
     </div>
   );
 }

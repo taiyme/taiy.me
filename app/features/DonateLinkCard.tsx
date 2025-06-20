@@ -2,11 +2,11 @@ import type { Child } from 'hono/jsx';
 
 import IconChevronRight from '@/components/IconChevronRight';
 import IconExternalLink from '@/components/IconExternalLink';
-import type { LinkBaseProps } from '@/types/link';
+import type { Link } from '@/types/Link';
 import { generateLinkAttributes } from '@/utils/generateLinkAttributes';
 
 type Props = Readonly<
-  & LinkBaseProps
+  & Link
   & {
     label: NonNullable<Child>;
     description: NonNullable<Child>;

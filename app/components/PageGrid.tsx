@@ -9,7 +9,7 @@ export default function PageGrid({ children }: Props) {
     <div
       class={`
         grid grid-cols-1 gap-4
-        @xs/page:grid-cols-[repeat(auto-fill,minmax(16rem,1fr))]
+        @xs:grid-cols-[repeat(auto-fill,minmax(16rem,1fr))]
       `}
     >
       {children}

@@ -2,10 +2,9 @@ import HeadingText from '@/components/HeadingText';
 import LinkText from '@/components/LinkText';
 import PageGrid from '@/components/PageGrid';
 import AboutCard from '@/features/AboutCard';
-import type { Metadata } from '@/types/metadata';
+import type { Metadata } from '@/types/Metadata';
 
 export const metadata = {
-  path: '/about',
   title: 'taiyについて',
   description: '音声作品と音ゲー、たまにプログラミング。',
 } as const satisfies Metadata;

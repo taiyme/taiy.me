@@ -1,11 +1,10 @@
 import HeadingText from '@/components/HeadingText';
 import LinkText from '@/components/LinkText';
 import AsmrSectionTitle from '@/features/AsmrSectionTitle';
-import type { Metadata } from '@/types/metadata';
+import type { Metadata } from '@/types/Metadata';
 import { generateDlafLink } from '@/utils/generateDlafLink';
 
 export const metadata = {
-  path: '/specials/asmr',
   title: 'おすすめの音声作品を紹介するだけ',
   description: 'taiyがひたすら音声作品を紹介するページです。',
 } as const satisfies Metadata;
@@ -31,7 +30,7 @@ export default function Page() {
           <h2
             class={`
               grid grid-cols-[auto_1fr] items-center gap-3 text-lg font-bold
-              @xl/page:text-xl
+              @xl:text-xl
             `}
           >
             <div>全年齢向け</div>
@@ -145,7 +144,7 @@ export default function Page() {
           <h2
             class={`
               grid grid-cols-[auto_1fr] items-center gap-3 text-lg font-bold
-              @xl/page:text-xl
+              @xl:text-xl
             `}
           >
             <div>成人向け</div>

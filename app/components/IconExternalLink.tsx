@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2020-2024 Paweł Kuna
 // SPDX-License-Identifier: MIT
 
-import type { IconBaseProps } from '@/types/icon';
+import type { Icon } from '@/types/Icon';
 
 type Props = Readonly<
-  IconBaseProps
+  Icon
 >;
 
 export default function IconExternalLink({ class: classes }: Props) {

@@ -1,10 +1,10 @@
 import IconChevronRight from '@/components/IconChevronRight';
 import IconExternalLink from '@/components/IconExternalLink';
-import type { LinkBasePropsWithChildren } from '@/types/link';
+import type { LinkWithChildren } from '@/types/Link';
 import { generateLinkAttributes } from '@/utils/generateLinkAttributes';
 
 type Props = Readonly<
-  LinkBasePropsWithChildren
+  LinkWithChildren
 >;
 
 export default function LinkButton({ children, ...linkProps }: Props) {

@@ -1,8 +1,7 @@
 import LinkEmail from '@/components/$LinkEmail';
-import type { Metadata } from '@/types/metadata';
+import type { Metadata } from '@/types/Metadata';
 
 export const metadata = {
-  path: '/specials/statement',
   title: 'taiyの発音に関する公式声明',
   description: 'taiyの正式な発音は「たいいー」です。この件について公式声明を発表します。',
 } as const satisfies Metadata;
@@ -14,7 +13,7 @@ export default function Page() {
         <div
           class={`
             flex justify-end text-right text-sm
-            @xl/page:text-base
+            @xl:text-base
           `}
         >
           <ul>
@@ -25,7 +24,7 @@ export default function Page() {
         <h1
           class={`
             text-center text-xl font-bold
-            @xl/page:text-2xl
+            @xl:text-2xl
           `}
         >
           taiyの発音に関する公式声明
