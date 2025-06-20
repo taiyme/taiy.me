@@ -31,7 +31,7 @@
     "@taiyme/eslint-config": "0.10.5",
     "@types/babel__generator": "7.27.0",
     "@types/babel__traverse": "7.20.7",
-    "@types/node": "22.15.29",
+    "@types/node": "22.15.32",
     "@typescript-eslint/parser": "8.34.1",
     "@typescript-eslint/typescript-estree": "8.34.1",
     "better-typescript-lib": "2.11.0",
@@ -50,7 +50,7 @@
     "vite-tsconfig-paths": "5.1.4",
     "wrangler": "4.20.3"
   },
-  "packageManager": "pnpm@10.11.1",
+  "packageManager": "pnpm@10.12.1",
   "engines": {
     "node": ">=22.0.0",
     "pnpm": ">=10.6.0"
