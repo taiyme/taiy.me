@@ -33,6 +33,10 @@
       "groupName": "runtime dependencies",
       "groupSlug": "runtime-deps",
       "matchDepNames": ["node", "@types/node", "pnpm", "npm:pnpm"]
+    },
+    {
+      "groupName": null,
+      "matchDepNames": ["hono", "punycode.js"]
     }
   ],
   "lockFileMaintenance": {
