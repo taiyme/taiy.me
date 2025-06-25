@@ -15,5 +15,5 @@ overrides:
   esbuild: $esbuild
 
 patchedDependencies:
-  hono@4.8.1: patches/hono@4.8.1.patch
+  hono@4.8.3: patches/hono@4.8.3.patch
   punycode.js@2.3.1: patches/punycode.js@2.3.1.patch
