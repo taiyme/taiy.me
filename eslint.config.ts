@@ -66,7 +66,7 @@ export default [
     },
     rules: {
       ...betterTailwindcssPlugin.configs.recommended?.rules,
-      'better-tailwindcss/multiline': ['warn', { printWidth: 120 }],
+      'better-tailwindcss/enforce-consistent-line-wrapping': ['warn', { printWidth: 120 }],
     },
   },
 ] as const satisfies Linter.Config[];

@@ -88,8 +88,8 @@ importers:
         specifier: 2.1.0
         version: 2.1.0(eslint@9.29.0(jiti@2.4.2))
       eslint-plugin-better-tailwindcss:
-        specifier: 3.4.1
-        version: 3.4.1(eslint@9.29.0(jiti@2.4.2))(tailwindcss@4.1.10)
+        specifier: 3.4.2
+        version: 3.4.2(eslint@9.29.0(jiti@2.4.2))(tailwindcss@4.1.10)
       globals:
         specifier: 16.2.0
         version: 16.2.0
@@ -1296,6 +1296,10 @@ packages:
     resolution: {integrity: sha512-ZSW3ma5GkcQBIpwZTSRAI8N71Uuwgs93IezB7mf7R60tC8ZbJideoDNKjHn2O9KIlx6rkGTTEk1xUCK2E1Y2Yg==}
     engines: {node: '>=10.13.0'}
 
+  enhanced-resolve@5.18.2:
+    resolution: {integrity: sha512-6Jw4sE1maoRJo3q8MsSIn2onJFbLTOjY9hlx4DZXmOKvLRd1Ok2kXmAGXaafL2+ijsJZ1ClYbl/pmqr9+k4iUQ==}
+    engines: {node: '>=10.13.0'}
+
   entities@4.5.0:
     resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
     engines: {node: '>=0.12'}
@@ -1351,8 +1355,8 @@ packages:
     peerDependencies:
       eslint: ^9.5.0
 
-  eslint-plugin-better-tailwindcss@3.4.1:
-    resolution: {integrity: sha512-0H6uvPwi9FcoIusrIhjTru/3C1ieKqQVc4kSleGfbv/oKdYtUjl290gSd/gs23et4E7UmegC8e64Jb7pDRiQFA==}
+  eslint-plugin-better-tailwindcss@3.4.2:
+    resolution: {integrity: sha512-7M5h3bSQbYUDP2do2etVqIKIJ17OqbtjoJd+DUKR9Ykeb0ezOHH4YtDoXJu3JdKUKpVQOyBZU+/oJ+33DQnEhg==}
     engines: {node: ^20.11.0 || >=21.2.0}
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
@@ -3581,6 +3585,11 @@ snapshots:
       graceful-fs: 4.2.11
       tapable: 2.2.2
 
+  enhanced-resolve@5.18.2:
+    dependencies:
+      graceful-fs: 4.2.11
+      tapable: 2.2.2
+
   entities@4.5.0: {}
 
   es-abstract@1.24.0:
@@ -3727,10 +3736,10 @@ snapshots:
       '@eslint/compat': 1.2.9(eslint@9.29.0(jiti@2.4.2))
       eslint: 9.29.0(jiti@2.4.2)
 
-  eslint-plugin-better-tailwindcss@3.4.1(eslint@9.29.0(jiti@2.4.2))(tailwindcss@4.1.10):
+  eslint-plugin-better-tailwindcss@3.4.2(eslint@9.29.0(jiti@2.4.2))(tailwindcss@4.1.10):
     dependencies:
       '@eslint/css-tree': 3.6.1
-      enhanced-resolve: 5.18.1
+      enhanced-resolve: 5.18.2
       eslint: 9.29.0(jiti@2.4.2)
       jiti: 2.4.2
       postcss: 8.5.6
