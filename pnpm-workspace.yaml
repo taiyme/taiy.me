@@ -5,12 +5,6 @@ onlyBuiltDependencies:
   - workerd
 
 overrides:
-  '@babel/generator': $@babel/generator
-  '@babel/parser': $@babel/parser
-  '@babel/traverse': $@babel/traverse
-  '@babel/types': $@babel/types
-  '@types/babel__generator': $@types/babel__generator
-  '@types/babel__traverse': $@types/babel__traverse
   '@typescript-eslint/typescript-estree': $@typescript-eslint/typescript-estree
   esbuild: $esbuild
 

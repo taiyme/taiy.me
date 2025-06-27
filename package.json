@@ -20,17 +20,12 @@
     "honox": "0.1.42"
   },
   "devDependencies": {
-    "@babel/generator": "7.27.5",
-    "@babel/parser": "7.27.5",
-    "@babel/traverse": "7.27.4",
-    "@babel/types": "7.27.6",
     "@cloudflare/workers-types": "4.20250620.0",
     "@hono/vite-build": "1.6.2",
     "@hono/vite-dev-server": "0.20.0",
     "@tailwindcss/vite": "4.1.10",
     "@taiyme/eslint-config": "0.10.5",
-    "@types/babel__generator": "7.27.0",
-    "@types/babel__traverse": "7.20.7",
+    "@taiyme/vite-plugin-jsx-prune-classname": "0.0.2",
     "@types/node": "22.15.33",
     "@typescript-eslint/parser": "8.35.0",
     "@typescript-eslint/typescript-estree": "8.35.0",
