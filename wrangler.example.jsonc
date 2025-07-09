@@ -6,6 +6,9 @@
   "compatibility_flags": [
     "nodejs_compat",
   ],
+  "minify": true,
+  "workers_dev": false,
+  "preview_urls": false,
   "routes": [
     {
       "pattern": "<YOUR_CUSTOM_DOMAIN>",
@@ -15,6 +18,12 @@
   "assets": {
     "directory": "./dist",
   },
+  "kv_namespaces": [
+    {
+      "binding": "Redirect_KV",
+      "id": "<YOUR_REDIRECT_KV_ID>",
+    },
+  ],
   "observability": {
     "enabled": true,
   },

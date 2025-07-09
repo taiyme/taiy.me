@@ -35,10 +35,12 @@ jobs:
         env:
           WRANGLER_WORKER_NAME: ${{ secrets.WRANGLER_WORKER_NAME }}
           WRANGLER_CUSTOM_DOMAIN: ${{ secrets.WRANGLER_CUSTOM_DOMAIN }}
+          WRANGLER_REDIRECT_KV_ID: ${{ secrets.WRANGLER_REDIRECT_KV_ID }}
         run: |
           cp wrangler.example.jsonc wrangler.jsonc
           sed -i "s/<YOUR_WORKER_NAME>/${WRANGLER_WORKER_NAME}/g" wrangler.jsonc
           sed -i "s/<YOUR_CUSTOM_DOMAIN>/${WRANGLER_CUSTOM_DOMAIN}/g" wrangler.jsonc
+          sed -i "s/<YOUR_REDIRECT_KV_ID>/${WRANGLER_REDIRECT_KV_ID}/g" wrangler.jsonc
 
       - name: Set environment variables
         env:

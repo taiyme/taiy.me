@@ -13,7 +13,7 @@
     "dev": "vite",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "preview": "wrangler dev"
+    "preview": "pnpm build && wrangler dev --remote"
   },
   "dependencies": {
     "hono": "4.8.3",

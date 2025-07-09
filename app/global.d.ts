@@ -1,3 +1,4 @@
+import type { KVNamespace } from '@cloudflare/workers-types';
 import type {} from 'hono';
 
 import type { Metadata } from '@/types/Metadata';
@@ -6,8 +7,9 @@ declare module 'hono' {
   interface Env {
     // eslint-disable-next-line @typescript-eslint/no-empty-object-type
     Variables: {};
-    // eslint-disable-next-line @typescript-eslint/no-empty-object-type
-    Bindings: {};
+    Bindings: {
+      Redirect_KV: KVNamespace;
+    };
   }
 
   interface ContextRenderer {
