@@ -7,14 +7,12 @@ settings:
 overrides:
   '@typescript-eslint/typescript-estree': 8.35.0
   esbuild: 0.25.5
+  idna-uts46-hx>tr46: '-'
 
 patchedDependencies:
   hono@4.8.3:
     hash: 4af8248fd1d8e8cb46ad4938502f3017cf9bc9eef2beebef6ba27cda47acce8b
     path: patches/hono@4.8.3.patch
-  punycode.js@2.3.1:
-    hash: 20ec06028328ceeeb564cf6a719ac88c5b429adf4ba036babbbaa7d34a285530
-    path: patches/punycode.js@2.3.1.patch
 
 importers:
 
@@ -72,12 +70,12 @@ importers:
       globals:
         specifier: 16.2.0
         version: 16.2.0
+      idna-uts46-hx:
+        specifier: 6.0.8
+        version: 6.0.8
       jiti:
         specifier: 2.4.2
         version: 2.4.2
-      punycode.js:
-        specifier: 2.3.1
-        version: 2.3.1(patch_hash=20ec06028328ceeeb564cf6a719ac88c5b429adf4ba036babbbaa7d34a285530)
       tailwind-variants:
         specifier: 1.0.0
         version: 1.0.0(tailwindcss@4.1.10)
@@ -1622,6 +1620,10 @@ packages:
     peerDependencies:
       hono: '>=4.*'
 
+  idna-uts46-hx@6.0.8:
+    resolution: {integrity: sha512-s0J74AXhvF+TLw3K5cXBSG2PRRFyRl9fmZXWO4BSHIpSDaBA/JCvbdYnFGjnp3ue7fC9Sol6ZDVoppUQlRZx9g==}
+    engines: {node: '>=20.6.1'}
+
   ignore@5.3.2:
     resolution: {integrity: sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g==}
     engines: {node: '>= 4'}
@@ -2087,10 +2089,6 @@ packages:
 
   prop-types@15.8.1:
     resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
-
-  punycode.js@2.3.1:
-    resolution: {integrity: sha512-uxFIHU0YlHYhDQtV4R9J6a52SLx28BCjT+4ieh7IGbgwVJWO+km431c4yRlREUAsAmt/uMjQUyQHNEPf0M39CA==}
-    engines: {node: '>=6'}
 
   punycode@2.3.1:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
@@ -4102,6 +4100,8 @@ snapshots:
       - supports-color
       - wrangler
 
+  idna-uts46-hx@6.0.8: {}
+
   ignore@5.3.2: {}
 
   ignore@7.0.5: {}
@@ -4554,8 +4554,6 @@ snapshots:
       loose-envify: 1.4.0
       object-assign: 4.1.1
       react-is: 16.13.1
-
-  punycode.js@2.3.1(patch_hash=20ec06028328ceeeb564cf6a719ac88c5b429adf4ba036babbbaa7d34a285530): {}
 
   punycode@2.3.1: {}
 

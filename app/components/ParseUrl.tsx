@@ -1,6 +1,5 @@
-import { toUnicode } from 'punycode.js';
-
 import { SITE_BASE_URL } from '@/constants/site';
+import { domainToUnicode } from '@/utils/punycode';
 import { safeURIDecode } from '@/utils/safeURIDecode';
 import { safeURLParse } from '@/utils/safeURLParse';
 
@@ -19,7 +18,7 @@ export default function ParseUrl({ href }: Props) {
           `${url.protocol}//`
         )}
         {url.hostname !== '' && (
-          <span class='font-bold'>{toUnicode(url.hostname)}</span>
+          <span class='font-bold'>{domainToUnicode(url.hostname)}</span>
         )}
         {url.port !== '' && (
           `:${url.port}`

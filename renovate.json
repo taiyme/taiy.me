@@ -36,7 +36,7 @@
     },
     {
       "groupName": null,
-      "matchDepNames": ["hono", "punycode.js"]
+      "matchDepNames": ["hono"]
     }
   ],
   "lockFileMaintenance": {

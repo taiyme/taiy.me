@@ -7,7 +7,7 @@ onlyBuiltDependencies:
 overrides:
   '@typescript-eslint/typescript-estree': $@typescript-eslint/typescript-estree
   esbuild: $esbuild
+  idna-uts46-hx>tr46: '-'
 
 patchedDependencies:
   hono@4.8.3: patches/hono@4.8.3.patch
-  punycode.js@2.3.1: patches/punycode.js@2.3.1.patch
