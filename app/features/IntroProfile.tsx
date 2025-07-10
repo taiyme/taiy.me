@@ -63,7 +63,7 @@ export default function IntroProfile({ semantics }: Props) {
       </XHeadingGroup>
       <div class='-my-1 grid grid-flow-col gap-2'>
         <LinkIcon
-          href='https://taiy.me/to/fedi'
+          href='/to/fedi'
           external
           icon={IconBrandMisskeyFilled}
           aria-label='taiyのMisskeyを見る'

@@ -1,15 +1,19 @@
 import type { PropsWithChildren } from 'hono/jsx';
 
+type InternalUrl = `/${string}`;
+
+type ExternalUrl = `https://${string}` | `http://${string}` | `/to/${string}`;
+
 type Case_InternalLink = Readonly<{
   external?: false;
-  to: `/${string}`;
+  to: InternalUrl;
   href?: never;
 }>;
 
 type Case_ExternalLink = Readonly<{
   external: true;
   to?: never;
-  href: string;
+  href: ExternalUrl;
 }>;
 
 export type Link = Readonly<

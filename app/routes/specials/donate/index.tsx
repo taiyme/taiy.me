@@ -70,7 +70,7 @@ export default function Page() {
             description={(
               <p>モンスター パイプラインパンチが好き</p>
             )}
-            href='https://taiy.me/to/amazon'
+            href='/to/wishlist'
             external
           />
           <DonateLinkCard

@@ -8,5 +8,5 @@ type Props = Readonly<{
 }>;
 
 export function generateDlafLink({ productId, salesArea }: Props) {
-  return `https://dlaf.jp/${salesArea}/dlaf/=/t/n/link/work/aid/${DLAF_ID}/id/${productId}.html`;
+  return `https://dlaf.jp/${salesArea}/dlaf/=/t/n/link/work/aid/${DLAF_ID}/id/${productId}.html` as const;
 }
