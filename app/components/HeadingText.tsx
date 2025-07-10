@@ -1,7 +1,7 @@
 import { tv, type VariantProps } from 'tailwind-variants';
 import type { SetRequired } from 'type-fest';
 
-import type { Heading } from '@/types/Heading';
+import type { HeadingTextProps } from '@/types/HeadingText';
 
 const slots = tv({
   slots: {
@@ -32,7 +32,7 @@ const slots = tv({
 });
 
 type Props = Readonly<
-  & Heading
+  & HeadingTextProps
   & SetRequired<
     VariantProps<typeof slots>,
     | 'level'

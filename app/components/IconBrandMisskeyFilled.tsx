@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2025 syuilo and Misskey Project
 // SPDX-License-Identifier: CC-BY-SA-4.0
 
-import type { Icon } from '@/types/Icon';
+import type { IconProps } from '@/types/Icon';
 
 type Props = Readonly<
-  Icon
+  IconProps
 >;
 
 export default function IconBrandMisskeyFilled({ class: classes }: Props) {

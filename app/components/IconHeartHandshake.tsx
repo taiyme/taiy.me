@@ -1,10 +1,10 @@
 // SPDX-FileCopyrightText: 2020-2024 Paweł Kuna
 // SPDX-License-Identifier: MIT
 
-import type { Icon } from '@/types/Icon';
+import type { IconProps } from '@/types/Icon';
 
 type Props = Readonly<
-  Icon
+  IconProps
 >;
 
 export default function IconHeartHandshake({ class: classes }: Props) {

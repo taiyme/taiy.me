@@ -10,14 +10,14 @@ type Case_WithHeading = Readonly<{
   children?: never;
 }>;
 
-type Base_Heading = Readonly<{
+type BaseProps_HeadingText = Readonly<{
   caption?: Child;
 }>;
 
-export type Heading = Readonly<
+export type HeadingTextProps = Readonly<
   & (
     | Case_WithChildren
     | Case_WithHeading
   )
-  & Base_Heading
+  & BaseProps_HeadingText
 >;

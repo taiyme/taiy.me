@@ -16,7 +16,7 @@ type Case_ExternalLink = Readonly<{
   href: ExternalUrl;
 }>;
 
-export type Link = Readonly<
+export type LinkProps = Readonly<
   & (
     | Case_InternalLink
     | Case_ExternalLink
@@ -29,6 +29,6 @@ export type Link = Readonly<
   }
 >;
 
-export type LinkWithChildren = Readonly<
-  PropsWithChildren<Link>
+export type LinkWithChildrenProps = Readonly<
+  PropsWithChildren<LinkProps>
 >;

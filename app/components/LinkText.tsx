@@ -2,7 +2,7 @@ import { tv, type VariantProps } from 'tailwind-variants';
 
 import IconExternalLink from '@/components/IconExternalLink';
 import ParseUrl from '@/components/ParseUrl';
-import type { LinkWithChildren } from '@/types/Link';
+import type { LinkWithChildrenProps } from '@/types/Link';
 import { generateLinkAttributes } from '@/utils/generateLinkAttributes';
 
 const slots = tv({
@@ -34,7 +34,7 @@ const slots = tv({
 });
 
 type Props = Readonly<
-  & LinkWithChildren
+  & LinkWithChildrenProps
   & Pick<
     VariantProps<typeof slots>,
     | 'variant'

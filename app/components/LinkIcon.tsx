@@ -1,10 +1,10 @@
 import type { FC, JSX } from 'hono/jsx';
 
-import type { Link } from '@/types/Link';
+import type { LinkProps } from '@/types/Link';
 import { generateLinkAttributes } from '@/utils/generateLinkAttributes';
 
 type Props = Readonly<
-  & Link
+  & LinkProps
   & {
     icon: FC<JSX.HTMLAttributes>;
   }

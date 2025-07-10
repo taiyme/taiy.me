@@ -1,7 +1,7 @@
-import type { Link } from '@/types/Link';
+import type { LinkProps } from '@/types/Link';
 import { omitUndefined } from '@/utils/omitUndefined';
 
-export function generateLinkAttributes<T extends Link>(
+export function generateLinkAttributes<T extends LinkProps>(
   {
     to: internalHref,
     href: externalHref,
