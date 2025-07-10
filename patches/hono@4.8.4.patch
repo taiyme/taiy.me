@@ -1,5 +1,5 @@
 diff --git a/dist/cjs/jsx/base.js b/dist/cjs/jsx/base.js
-index 9bf72c30e8912c8a4eff3c9dbf14fe0eaf58add2..ba6099aca891c408457193f0403685686f9efec6 100644
+index 780856ecfa150bb5bcfe451d62ca0dd9ff15e3b9..17a9cb300c243914877156d17fb008179df93378 100644
 --- a/dist/cjs/jsx/base.js
 +++ b/dist/cjs/jsx/base.js
 @@ -195,7 +195,7 @@ class JSXNode {
@@ -12,7 +12,7 @@ index 9bf72c30e8912c8a4eff3c9dbf14fe0eaf58add2..ba6099aca891c408457193f040368568
      }
      buffer[0] += ">";
 diff --git a/dist/jsx/base.js b/dist/jsx/base.js
-index 787b23fee75f02110dd327703a551f2c0c34c296..6b548f9bd58c50b7c53175e5e4c65886780fffc6 100644
+index b8a4ce03055209df1cf78b27076bd9bdbce3c45e..aa3c078a56b30bf723e829904ca59ed22eba3622 100644
 --- a/dist/jsx/base.js
 +++ b/dist/jsx/base.js
 @@ -156,7 +156,7 @@ var JSXNode = class {

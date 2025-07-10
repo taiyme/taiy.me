@@ -10,30 +10,30 @@ overrides:
   idna-uts46-hx>tr46: '-'
 
 patchedDependencies:
-  hono@4.8.3:
-    hash: 4af8248fd1d8e8cb46ad4938502f3017cf9bc9eef2beebef6ba27cda47acce8b
-    path: patches/hono@4.8.3.patch
+  hono@4.8.4:
+    hash: f757edf5e503767181bcbd5d03d4f64122a7ce98df26f28c13b368f2089ff581
+    path: patches/hono@4.8.4.patch
 
 importers:
 
   .:
     dependencies:
       hono:
-        specifier: 4.8.3
-        version: 4.8.3(patch_hash=4af8248fd1d8e8cb46ad4938502f3017cf9bc9eef2beebef6ba27cda47acce8b)
+        specifier: 4.8.4
+        version: 4.8.4(patch_hash=f757edf5e503767181bcbd5d03d4f64122a7ce98df26f28c13b368f2089ff581)
       honox:
         specifier: 0.1.43
-        version: 0.1.43(hono@4.8.3(patch_hash=4af8248fd1d8e8cb46ad4938502f3017cf9bc9eef2beebef6ba27cda47acce8b))(miniflare@4.20250617.4)(wrangler@4.21.2(@cloudflare/workers-types@4.20250620.0))
+        version: 0.1.43(hono@4.8.4(patch_hash=f757edf5e503767181bcbd5d03d4f64122a7ce98df26f28c13b368f2089ff581))(miniflare@4.20250617.4)(wrangler@4.21.2(@cloudflare/workers-types@4.20250620.0))
     devDependencies:
       '@cloudflare/workers-types':
         specifier: 4.20250620.0
         version: 4.20250620.0
       '@hono/vite-build':
         specifier: 1.6.2
-        version: 1.6.2(hono@4.8.3(patch_hash=4af8248fd1d8e8cb46ad4938502f3017cf9bc9eef2beebef6ba27cda47acce8b))
+        version: 1.6.2(hono@4.8.4(patch_hash=f757edf5e503767181bcbd5d03d4f64122a7ce98df26f28c13b368f2089ff581))
       '@hono/vite-dev-server':
         specifier: 0.20.0
-        version: 0.20.0(hono@4.8.3(patch_hash=4af8248fd1d8e8cb46ad4938502f3017cf9bc9eef2beebef6ba27cda47acce8b))(miniflare@4.20250617.4)(wrangler@4.21.2(@cloudflare/workers-types@4.20250620.0))
+        version: 0.20.0(hono@4.8.4(patch_hash=f757edf5e503767181bcbd5d03d4f64122a7ce98df26f28c13b368f2089ff581))(miniflare@4.20250617.4)(wrangler@4.21.2(@cloudflare/workers-types@4.20250620.0))
       '@tailwindcss/vite':
         specifier: 4.1.10
         version: 4.1.10(vite@6.3.5(@types/node@22.15.33)(jiti@2.4.2)(lightningcss@1.30.1))
@@ -1606,8 +1606,8 @@ packages:
     resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
     engines: {node: '>= 0.4'}
 
-  hono@4.8.3:
-    resolution: {integrity: sha512-jYZ6ZtfWjzBdh8H/0CIFfCBHaFL75k+KMzaM177hrWWm2TWL39YMYaJgB74uK/niRc866NMlH9B8uCvIo284WQ==}
+  hono@4.8.4:
+    resolution: {integrity: sha512-KOIBp1+iUs0HrKztM4EHiB2UtzZDTBihDtOF5K6+WaJjCPeaW4Q92R8j63jOhvJI5+tZSMuKD9REVEXXY9illg==}
     engines: {node: '>=16.9.0'}
 
   honox@0.1.43:
@@ -2804,27 +2804,27 @@ snapshots:
 
   '@fastify/busboy@2.1.1': {}
 
-  '@hono/node-server@1.14.3(hono@4.8.3(patch_hash=4af8248fd1d8e8cb46ad4938502f3017cf9bc9eef2beebef6ba27cda47acce8b))':
+  '@hono/node-server@1.14.3(hono@4.8.4(patch_hash=f757edf5e503767181bcbd5d03d4f64122a7ce98df26f28c13b368f2089ff581))':
     dependencies:
-      hono: 4.8.3(patch_hash=4af8248fd1d8e8cb46ad4938502f3017cf9bc9eef2beebef6ba27cda47acce8b)
+      hono: 4.8.4(patch_hash=f757edf5e503767181bcbd5d03d4f64122a7ce98df26f28c13b368f2089ff581)
 
-  '@hono/vite-build@1.6.2(hono@4.8.3(patch_hash=4af8248fd1d8e8cb46ad4938502f3017cf9bc9eef2beebef6ba27cda47acce8b))':
+  '@hono/vite-build@1.6.2(hono@4.8.4(patch_hash=f757edf5e503767181bcbd5d03d4f64122a7ce98df26f28c13b368f2089ff581))':
     dependencies:
-      hono: 4.8.3(patch_hash=4af8248fd1d8e8cb46ad4938502f3017cf9bc9eef2beebef6ba27cda47acce8b)
+      hono: 4.8.4(patch_hash=f757edf5e503767181bcbd5d03d4f64122a7ce98df26f28c13b368f2089ff581)
 
-  '@hono/vite-dev-server@0.19.1(hono@4.8.3(patch_hash=4af8248fd1d8e8cb46ad4938502f3017cf9bc9eef2beebef6ba27cda47acce8b))(miniflare@4.20250617.4)(wrangler@4.21.2(@cloudflare/workers-types@4.20250620.0))':
+  '@hono/vite-dev-server@0.19.1(hono@4.8.4(patch_hash=f757edf5e503767181bcbd5d03d4f64122a7ce98df26f28c13b368f2089ff581))(miniflare@4.20250617.4)(wrangler@4.21.2(@cloudflare/workers-types@4.20250620.0))':
     dependencies:
-      '@hono/node-server': 1.14.3(hono@4.8.3(patch_hash=4af8248fd1d8e8cb46ad4938502f3017cf9bc9eef2beebef6ba27cda47acce8b))
-      hono: 4.8.3(patch_hash=4af8248fd1d8e8cb46ad4938502f3017cf9bc9eef2beebef6ba27cda47acce8b)
+      '@hono/node-server': 1.14.3(hono@4.8.4(patch_hash=f757edf5e503767181bcbd5d03d4f64122a7ce98df26f28c13b368f2089ff581))
+      hono: 4.8.4(patch_hash=f757edf5e503767181bcbd5d03d4f64122a7ce98df26f28c13b368f2089ff581)
       minimatch: 9.0.5
     optionalDependencies:
       miniflare: 4.20250617.4
       wrangler: 4.21.2(@cloudflare/workers-types@4.20250620.0)
 
-  '@hono/vite-dev-server@0.20.0(hono@4.8.3(patch_hash=4af8248fd1d8e8cb46ad4938502f3017cf9bc9eef2beebef6ba27cda47acce8b))(miniflare@4.20250617.4)(wrangler@4.21.2(@cloudflare/workers-types@4.20250620.0))':
+  '@hono/vite-dev-server@0.20.0(hono@4.8.4(patch_hash=f757edf5e503767181bcbd5d03d4f64122a7ce98df26f28c13b368f2089ff581))(miniflare@4.20250617.4)(wrangler@4.21.2(@cloudflare/workers-types@4.20250620.0))':
     dependencies:
-      '@hono/node-server': 1.14.3(hono@4.8.3(patch_hash=4af8248fd1d8e8cb46ad4938502f3017cf9bc9eef2beebef6ba27cda47acce8b))
-      hono: 4.8.3(patch_hash=4af8248fd1d8e8cb46ad4938502f3017cf9bc9eef2beebef6ba27cda47acce8b)
+      '@hono/node-server': 1.14.3(hono@4.8.4(patch_hash=f757edf5e503767181bcbd5d03d4f64122a7ce98df26f28c13b368f2089ff581))
+      hono: 4.8.4(patch_hash=f757edf5e503767181bcbd5d03d4f64122a7ce98df26f28c13b368f2089ff581)
       minimatch: 9.0.5
     optionalDependencies:
       miniflare: 4.20250617.4
@@ -4072,16 +4072,16 @@ snapshots:
     dependencies:
       function-bind: 1.1.2
 
-  hono@4.8.3(patch_hash=4af8248fd1d8e8cb46ad4938502f3017cf9bc9eef2beebef6ba27cda47acce8b): {}
+  hono@4.8.4(patch_hash=f757edf5e503767181bcbd5d03d4f64122a7ce98df26f28c13b368f2089ff581): {}
 
-  honox@0.1.43(hono@4.8.3(patch_hash=4af8248fd1d8e8cb46ad4938502f3017cf9bc9eef2beebef6ba27cda47acce8b))(miniflare@4.20250617.4)(wrangler@4.21.2(@cloudflare/workers-types@4.20250620.0)):
+  honox@0.1.43(hono@4.8.4(patch_hash=f757edf5e503767181bcbd5d03d4f64122a7ce98df26f28c13b368f2089ff581))(miniflare@4.20250617.4)(wrangler@4.21.2(@cloudflare/workers-types@4.20250620.0)):
     dependencies:
       '@babel/generator': 7.25.6
       '@babel/parser': 7.25.6
       '@babel/traverse': 7.25.6
       '@babel/types': 7.25.6
-      '@hono/vite-dev-server': 0.19.1(hono@4.8.3(patch_hash=4af8248fd1d8e8cb46ad4938502f3017cf9bc9eef2beebef6ba27cda47acce8b))(miniflare@4.20250617.4)(wrangler@4.21.2(@cloudflare/workers-types@4.20250620.0))
-      hono: 4.8.3(patch_hash=4af8248fd1d8e8cb46ad4938502f3017cf9bc9eef2beebef6ba27cda47acce8b)
+      '@hono/vite-dev-server': 0.19.1(hono@4.8.4(patch_hash=f757edf5e503767181bcbd5d03d4f64122a7ce98df26f28c13b368f2089ff581))(miniflare@4.20250617.4)(wrangler@4.21.2(@cloudflare/workers-types@4.20250620.0))
+      hono: 4.8.4(patch_hash=f757edf5e503767181bcbd5d03d4f64122a7ce98df26f28c13b368f2089ff581)
       jsonc-parser: 3.3.1
       precinct: 12.1.2
     optionalDependencies:
