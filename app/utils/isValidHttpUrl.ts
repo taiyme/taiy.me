@@ -1,10 +1,9 @@
+import { safeURLParse } from '@/utils/safeURLParse';
+
 type HttpUrl = `https://${string}` | `http://${string}`;
 
 export function isValidHttpUrl(input: string): input is HttpUrl {
-  try {
-    const { protocol } = new URL(input);
-    return protocol === 'https:' || protocol === 'http:';
-  } catch {
-    return false;
-  }
+  const protocol = safeURLParse(input)?.protocol;
+
+  return protocol === 'https:' || protocol === 'http:';
 }
