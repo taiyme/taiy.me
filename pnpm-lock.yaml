@@ -22,8 +22,8 @@ importers:
         specifier: 4.8.3
         version: 4.8.3(patch_hash=4af8248fd1d8e8cb46ad4938502f3017cf9bc9eef2beebef6ba27cda47acce8b)
       honox:
-        specifier: 0.1.42
-        version: 0.1.42(hono@4.8.3(patch_hash=4af8248fd1d8e8cb46ad4938502f3017cf9bc9eef2beebef6ba27cda47acce8b))(miniflare@4.20250617.4)(wrangler@4.21.2(@cloudflare/workers-types@4.20250620.0))
+        specifier: 0.1.43
+        version: 0.1.43(hono@4.8.3(patch_hash=4af8248fd1d8e8cb46ad4938502f3017cf9bc9eef2beebef6ba27cda47acce8b))(miniflare@4.20250617.4)(wrangler@4.21.2(@cloudflare/workers-types@4.20250620.0))
     devDependencies:
       '@cloudflare/workers-types':
         specifier: 4.20250620.0
@@ -148,10 +148,6 @@ packages:
 
   '@babel/types@7.25.6':
     resolution: {integrity: sha512-/l42B1qxpG6RdfYf343Uw1vmDjeNhneUXtzhojE7pDgfpEypmRhI6j1kr17XCVv4Cgl9HdAiQY2x0GwKm7rWCw==}
-    engines: {node: '>=6.9.0'}
-
-  '@babel/types@7.27.6':
-    resolution: {integrity: sha512-ETyHEk2VHHvl9b9jZP5IHPavHYk57EhanlRRuae9XCpb/j5bDCbPPMOBfCWhnl/7EDJz0jEMCi/RhccCE8r1+Q==}
     engines: {node: '>=6.9.0'}
 
   '@babel/types@7.27.7':
@@ -1614,8 +1610,8 @@ packages:
     resolution: {integrity: sha512-jYZ6ZtfWjzBdh8H/0CIFfCBHaFL75k+KMzaM177hrWWm2TWL39YMYaJgB74uK/niRc866NMlH9B8uCvIo284WQ==}
     engines: {node: '>=16.9.0'}
 
-  honox@0.1.42:
-    resolution: {integrity: sha512-FEz01nDUA8SrSR57ZLrUjJfQUUJ2XYcG++tajiTMwLIRv/2JLKb1UwOGT4no7CSAz5P/mejBOHcRclOTwuYGPQ==}
+  honox@0.1.43:
+    resolution: {integrity: sha512-PNlDHOPMrStgVwD4SOO/ihcA2iK3UaNluIWahxJkjY0dgvOc1hm8BBM06XpMNF2zVkOrtYk1xS3cCxCJZQIwpw==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       hono: '>=4.*'
@@ -2501,7 +2497,7 @@ snapshots:
 
   '@babel/generator@7.25.6':
     dependencies:
-      '@babel/types': 7.27.6
+      '@babel/types': 7.27.7
       '@jridgewell/gen-mapping': 0.3.8
       '@jridgewell/trace-mapping': 0.3.25
       jsesc: 2.5.2
@@ -2520,7 +2516,7 @@ snapshots:
 
   '@babel/parser@7.25.6':
     dependencies:
-      '@babel/types': 7.27.6
+      '@babel/types': 7.27.7
 
   '@babel/parser@7.27.7':
     dependencies:
@@ -2538,7 +2534,7 @@ snapshots:
       '@babel/generator': 7.27.5
       '@babel/parser': 7.27.7
       '@babel/template': 7.27.2
-      '@babel/types': 7.27.6
+      '@babel/types': 7.27.7
       debug: 4.4.1
       globals: 11.12.0
     transitivePeerDependencies:
@@ -2561,11 +2557,6 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.27.1
       to-fast-properties: 2.0.0
-
-  '@babel/types@7.27.6':
-    dependencies:
-      '@babel/helper-string-parser': 7.27.1
-      '@babel/helper-validator-identifier': 7.27.1
 
   '@babel/types@7.27.7':
     dependencies:
@@ -3561,11 +3552,11 @@ snapshots:
     dependencies:
       node-source-walk: 7.0.1
 
-  detective-postcss@7.0.1(postcss@8.5.4):
+  detective-postcss@7.0.1(postcss@8.5.6):
     dependencies:
       is-url: 1.2.4
-      postcss: 8.5.4
-      postcss-values-parser: 6.0.2(postcss@8.5.4)
+      postcss: 8.5.6
+      postcss-values-parser: 6.0.2(postcss@8.5.6)
 
   detective-sass@6.0.1:
     dependencies:
@@ -4083,7 +4074,7 @@ snapshots:
 
   hono@4.8.3(patch_hash=4af8248fd1d8e8cb46ad4938502f3017cf9bc9eef2beebef6ba27cda47acce8b): {}
 
-  honox@0.1.42(hono@4.8.3(patch_hash=4af8248fd1d8e8cb46ad4938502f3017cf9bc9eef2beebef6ba27cda47acce8b))(miniflare@4.20250617.4)(wrangler@4.21.2(@cloudflare/workers-types@4.20250620.0)):
+  honox@0.1.43(hono@4.8.3(patch_hash=4af8248fd1d8e8cb46ad4938502f3017cf9bc9eef2beebef6ba27cda47acce8b))(miniflare@4.20250617.4)(wrangler@4.21.2(@cloudflare/workers-types@4.20250620.0)):
     dependencies:
       '@babel/generator': 7.25.6
       '@babel/parser': 7.25.6
@@ -4506,11 +4497,11 @@ snapshots:
 
   postcss-value-parser@4.2.0: {}
 
-  postcss-values-parser@6.0.2(postcss@8.5.4):
+  postcss-values-parser@6.0.2(postcss@8.5.6):
     dependencies:
       color-name: 1.1.4
       is-url-superb: 4.0.0
-      postcss: 8.5.4
+      postcss: 8.5.6
       quote-unquote: 1.0.0
 
   postcss@8.5.4:
@@ -4532,7 +4523,7 @@ snapshots:
       detective-amd: 6.0.1
       detective-cjs: 6.0.1
       detective-es6: 5.0.1
-      detective-postcss: 7.0.1(postcss@8.5.4)
+      detective-postcss: 7.0.1(postcss@8.5.6)
       detective-sass: 6.0.1
       detective-scss: 5.0.1
       detective-stylus: 5.0.1
@@ -4540,7 +4531,7 @@ snapshots:
       detective-vue2: 2.2.0(typescript@5.8.3)
       module-definition: 6.0.1
       node-source-walk: 7.0.1
-      postcss: 8.5.4
+      postcss: 8.5.6
       typescript: 5.8.3
     transitivePeerDependencies:
       - supports-color
