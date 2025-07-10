@@ -10,4 +10,4 @@ overrides:
   idna-uts46-hx>tr46: '-'
 
 patchedDependencies:
-  hono@4.8.3: patches/hono@4.8.3.patch
+  hono@4.8.4: patches/hono@4.8.4.patch
