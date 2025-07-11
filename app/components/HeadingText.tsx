@@ -5,27 +5,17 @@ import type { HeadingTextProps } from '@/types/HeadingText';
 
 const slots = tv({
   slots: {
-    hgroupStyle: 'flex flex-wrap items-baseline gap-x-2',
     headingStyle: 'font-bold',
-    captionStyle: 'leading-relaxed text-gray-500',
   },
   variants: {
     level: {
       1: {
-        hgroupStyle: 'mb-4',
-        headingStyle: `
-          text-2xl
-          @xl:text-3xl
-        `,
-        captionStyle: '',
+        // eslint-disable-next-line better-tailwindcss/enforce-consistent-line-wrapping
+        headingStyle: 'mb-4 text-2xl @xl:text-3xl',
       },
       2: {
-        hgroupStyle: '',
-        headingStyle: `
-          text-lg
-          @xl:text-xl
-        `,
-        captionStyle: 'text-sm',
+        // eslint-disable-next-line better-tailwindcss/enforce-consistent-line-wrapping
+        headingStyle: 'text-lg @xl:text-xl',
       },
     },
   },
@@ -39,21 +29,14 @@ type Props = Readonly<
   >
 >;
 
-export default function HeadingText({ children, heading, caption, level }: Props) {
+export default function HeadingText({ children, level }: Props) {
   const XHeading = `h${level}` as const;
 
-  const { hgroupStyle, headingStyle, captionStyle } = slots({ level });
+  const { headingStyle } = slots({ level });
 
   return (
-    <hgroup class={hgroupStyle()}>
-      <XHeading class={headingStyle()}>
-        {children ?? heading}
-      </XHeading>
-      {caption && (
-        <p class={captionStyle()}>
-          {caption}
-        </p>
-      )}
-    </hgroup>
+    <XHeading class={headingStyle()}>
+      {children}
+    </XHeading>
   );
 }

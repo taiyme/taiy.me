@@ -1,23 +1,10 @@
 import type { Child } from 'hono/jsx';
 
-type Case_WithChildren = Readonly<{
+export type HeadingTextProps = Readonly<{
   children: NonNullable<Child>;
-  heading?: never;
 }>;
 
-type Case_WithHeading = Readonly<{
+export type HeadingTextWithCaptionProps = Readonly<{
   heading: NonNullable<Child>;
-  children?: never;
+  caption: NonNullable<Child>;
 }>;
-
-type BaseProps_HeadingText = Readonly<{
-  caption?: Child;
-}>;
-
-export type HeadingTextProps = Readonly<
-  & (
-    | Case_WithChildren
-    | Case_WithHeading
-  )
-  & BaseProps_HeadingText
->;
