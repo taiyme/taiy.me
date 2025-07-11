@@ -1,0 +1,16 @@
+export const PATRON_LIST = [
+  'すえ',
+  'Midra',
+  'ゆー',
+  'こちゅだぁほ',
+  'xyzzy',
+  'ふれすと',
+  'HiSubway',
+  'MateChan',
+  'Yagileo',
+  'nanasina',
+  'すい',
+  'ポンの助',
+  'たまふぁいなる',
+  'サメ',
+] satisfies string[] as string[];
