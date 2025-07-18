@@ -1,5 +1,5 @@
-import { SITE_BASE_URL } from '@/constants/site';
 import type { OpenGraph } from '@/types/OpenGraph';
+import { SITE_BASE_URL } from '@/constants/site';
 
 export const OG_DEFAULT = {
   ogType: 'website',

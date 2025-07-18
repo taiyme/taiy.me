@@ -1,7 +1,7 @@
 import type { NotFoundHandler } from 'hono';
 
-import HeadingText from '@/components/HeadingText';
 import type { Metadata } from '@/types/Metadata';
+import HeadingText from '@/components/HeadingText';
 
 const handler: NotFoundHandler = (c) => {
   const metadata = {

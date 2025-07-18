@@ -1,4 +1,5 @@
-import { createContext, type PropsWithChildren } from 'hono/jsx';
+import type { PropsWithChildren } from 'hono/jsx';
+import { createContext } from 'hono/jsx';
 
 import type { Metadata } from '@/types/Metadata';
 

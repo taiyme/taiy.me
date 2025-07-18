@@ -1,9 +1,9 @@
+import type { Metadata } from '@/types/Metadata';
 import LinkEmail from '@/components/$LinkEmail';
 import HeadingText from '@/components/HeadingText';
 import HeadingTextWithCaption from '@/components/HeadingTextWithCaption';
 import LinkText from '@/components/LinkText';
 import { PATRON_LIST } from '@/constants/patron';
-import type { Metadata } from '@/types/Metadata';
 
 export const metadata = {
   title: 'taiyを支援する',

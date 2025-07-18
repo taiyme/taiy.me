@@ -1,8 +1,9 @@
-import { tv, type VariantProps } from 'tailwind-variants';
+import type { VariantProps } from 'tailwind-variants';
+import { tv } from 'tailwind-variants';
 
+import type { LinkWithChildrenProps } from '@/types/Link';
 import IconExternalLink from '@/components/IconExternalLink';
 import ParseUrl from '@/components/ParseUrl';
-import type { LinkWithChildrenProps } from '@/types/Link';
 import { generateLinkAttributes } from '@/utils/generateLinkAttributes';
 
 const slots = tv({

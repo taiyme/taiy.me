@@ -1,8 +1,8 @@
+import type { Metadata } from '@/types/Metadata';
 import HeadingText from '@/components/HeadingText';
 import LinkText from '@/components/LinkText';
 import PageGrid from '@/components/PageGrid';
 import AboutCard from '@/features/AboutCard';
-import type { Metadata } from '@/types/Metadata';
 
 export const metadata = {
   title: 'taiyについて',

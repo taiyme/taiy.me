@@ -1,4 +1,5 @@
-import { type MouseEvent, useCallback, useState } from 'hono/jsx';
+import type { MouseEvent } from 'hono/jsx';
+import { useCallback, useState } from 'hono/jsx';
 
 type Props = Readonly<{
   user: string;
