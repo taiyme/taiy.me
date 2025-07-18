@@ -1,9 +1,9 @@
-import { useRequestContext } from 'hono/jsx-renderer';
 import type { AllUnionFields } from 'type-fest';
+import { useRequestContext } from 'hono/jsx-renderer';
 
+import type { Metadata } from '@/types/Metadata';
 import { OG_DEFAULT } from '@/constants/og';
 import { SITE_BASE_URL, SITE_NAME } from '@/constants/site';
-import type { Metadata } from '@/types/Metadata';
 
 export function generateHeadData(metadata: AllUnionFields<Metadata>) {
   const { noIndex = false } = metadata;

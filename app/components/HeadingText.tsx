@@ -1,5 +1,6 @@
-import { tv, type VariantProps } from 'tailwind-variants';
+import type { VariantProps } from 'tailwind-variants';
 import type { SetRequired } from 'type-fest';
+import { tv } from 'tailwind-variants';
 
 import type { HeadingTextProps } from '@/types/HeadingText';
 

@@ -1,6 +1,6 @@
+import type { Metadata } from '@/types/Metadata';
 import LinkEmail from '@/components/$LinkEmail';
 import HeadingText from '@/components/HeadingText';
-import type { Metadata } from '@/types/Metadata';
 
 export const metadata = {
   title: 'プライバシーポリシー',

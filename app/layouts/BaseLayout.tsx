@@ -1,9 +1,9 @@
 import type { PropsWithChildren } from 'hono/jsx';
 
+import type { Metadata } from '@/types/Metadata';
 import { MetadataProvider } from '@/contexts/MetadataContext';
 import BaseBody from '@/layouts/BaseBody';
 import BaseHead from '@/layouts/BaseHead';
-import type { Metadata } from '@/types/Metadata';
 
 type Props = Readonly<
   PropsWithChildren<{

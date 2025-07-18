@@ -1,7 +1,7 @@
+import type { Metadata } from '@/types/Metadata';
 import HeadingText from '@/components/HeadingText';
 import LinkText from '@/components/LinkText';
 import AsmrSectionTitle from '@/features/AsmrSectionTitle';
-import type { Metadata } from '@/types/Metadata';
 import { generateDlafLink } from '@/utils/generateDlafLink';
 
 export const metadata = {

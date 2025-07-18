@@ -1,5 +1,6 @@
-import { tv, type VariantProps } from 'tailwind-variants';
+import type { VariantProps } from 'tailwind-variants';
 import type { SetRequired } from 'type-fest';
+import { tv } from 'tailwind-variants';
 
 const slots = tv({
   slots: {

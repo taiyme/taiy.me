@@ -1,8 +1,9 @@
-import { tv, type VariantProps } from 'tailwind-variants';
+import type { VariantProps } from 'tailwind-variants';
 import type { SetRequired } from 'type-fest';
+import { tv } from 'tailwind-variants';
 
-import HeadingText from '@/components/HeadingText';
 import type { HeadingTextWithCaptionProps } from '@/types/HeadingText';
+import HeadingText from '@/components/HeadingText';
 
 const slots = tv({
   slots: {

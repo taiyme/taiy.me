@@ -1,5 +1,5 @@
-import IntroProfile from '@/features/IntroProfile';
 import type { Metadata } from '@/types/Metadata';
+import IntroProfile from '@/features/IntroProfile';
 
 export const metadata = {
   title: 'taiy.me',

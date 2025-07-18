@@ -1,5 +1,5 @@
-import LinkEmail from '@/components/$LinkEmail';
 import type { Metadata } from '@/types/Metadata';
+import LinkEmail from '@/components/$LinkEmail';
 
 export const metadata = {
   title: 'taiyの発音に関する公式声明',

@@ -1,10 +1,11 @@
+import type { Linter } from 'eslint';
+import type { CalleeMatchers } from 'eslint-plugin-better-tailwindcss/api/types';
 import taiymeConfig from '@taiyme/eslint-config';
 import tsEslintParser from '@typescript-eslint/parser';
-import type { Linter } from 'eslint';
 import gitignore from 'eslint-config-flat-gitignore';
 import betterTailwindcssPlugin from 'eslint-plugin-better-tailwindcss';
 import { getDefaultCallees } from 'eslint-plugin-better-tailwindcss/api/defaults';
-import { type CalleeMatchers, MatcherType } from 'eslint-plugin-better-tailwindcss/api/types';
+import { MatcherType } from 'eslint-plugin-better-tailwindcss/api/types';
 
 const files = ['**/*.{js,jsx,ts,tsx}'];
 
