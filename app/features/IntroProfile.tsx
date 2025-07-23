@@ -33,10 +33,16 @@ export default function IntroProfile({ semantics }: Props) {
         `}
       >
         <picture>
+          <source
+            type='image/avif'
+            srcset='/images/avatars/taiy_224.avif 1x, /images/avatars/taiy_448.avif 2x'
+          />
           <img
-            src='/images/avatars/taiy_512.png'
+            src='/images/avatars/taiy_224.webp'
+            srcset='/images/avatars/taiy_448.webp 2x'
             alt='taiyのアイコン'
             loading='eager'
+            fetchpriority='high'
             class='pointer-events-none size-full select-none'
           />
         </picture>

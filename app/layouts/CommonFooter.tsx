@@ -26,8 +26,13 @@ export default function CommonFooter() {
             `}
           >
             <picture>
+              <source
+                type='image/avif'
+                srcset='/images/avatars/taiy_32.avif 1x, /images/avatars/taiy_64.avif 2x'
+              />
               <img
-                src='/images/avatars/taiy_64.png'
+                src='/images/avatars/taiy_32.webp'
+                srcset='/images/avatars/taiy_64.webp 2x'
                 alt='taiyのアイコン'
                 loading='lazy'
                 class='pointer-events-none size-full select-none'
