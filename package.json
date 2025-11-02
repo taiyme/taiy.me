@@ -27,13 +27,13 @@
     "@taiyme/eslint-config": "0.11.0",
     "@taiyme/vite-plugin-jsx-prune-classname": "0.0.2",
     "@types/node": "22.18.10",
-    "@typescript-eslint/parser": "8.46.0",
-    "@typescript-eslint/typescript-estree": "8.46.0",
+    "@typescript-eslint/parser": "8.46.1",
+    "@typescript-eslint/typescript-estree": "8.46.1",
     "better-typescript-lib": "2.12.0",
     "esbuild": "0.25.6",
-    "eslint": "9.37.0",
+    "eslint": "9.38.0",
     "eslint-config-flat-gitignore": "2.1.0",
-    "eslint-plugin-better-tailwindcss": "3.7.9",
+    "eslint-plugin-better-tailwindcss": "3.7.10",
     "globals": "16.4.0",
     "idna-uts46-hx": "6.0.9",
     "jiti": "2.6.1",
@@ -43,7 +43,7 @@
     "typescript": "5.8.3",
     "vite": "7.1.11",
     "vite-tsconfig-paths": "5.1.4",
-    "wrangler": "4.42.2"
+    "wrangler": "4.43.0"
   },
   "packageManager": "pnpm@10.18.2",
   "engines": {
