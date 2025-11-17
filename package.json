@@ -31,11 +31,11 @@
     "@typescript-eslint/typescript-estree": "8.46.2",
     "better-typescript-lib": "2.12.0",
     "esbuild": "0.25.6",
-    "eslint": "9.38.0",
+    "eslint": "9.39.0",
     "eslint-config-flat-gitignore": "2.1.0",
     "eslint-plugin-better-tailwindcss": "3.7.10",
-    "globals": "16.4.0",
-    "idna-uts46-hx": "6.0.9",
+    "globals": "16.5.0",
+    "idna-uts46-hx": "6.1.0",
     "jiti": "2.6.1",
     "tailwind-variants": "1.0.0",
     "tailwindcss": "4.1.16",
@@ -43,7 +43,7 @@
     "typescript": "5.8.3",
     "vite": "7.1.12",
     "vite-tsconfig-paths": "5.1.4",
-    "wrangler": "4.45.0"
+    "wrangler": "4.45.3"
   },
   "packageManager": "pnpm@10.20.0",
   "engines": {
