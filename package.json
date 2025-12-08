@@ -20,15 +20,15 @@
     "honox": "0.1.43"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "4.20251128.0",
+    "@cloudflare/workers-types": "4.20251205.0",
     "@hono/vite-build": "1.8.0",
     "@hono/vite-dev-server": "0.20.0",
     "@tailwindcss/vite": "4.1.17",
     "@taiyme/eslint-config": "0.11.0",
     "@taiyme/vite-plugin-jsx-prune-classname": "0.0.2",
     "@types/node": "22.19.1",
-    "@typescript-eslint/parser": "8.48.0",
-    "@typescript-eslint/typescript-estree": "8.48.0",
+    "@typescript-eslint/parser": "8.48.1",
+    "@typescript-eslint/typescript-estree": "8.48.1",
     "better-typescript-lib": "2.12.0",
     "esbuild": "0.25.6",
     "eslint": "9.39.1",
@@ -41,9 +41,9 @@
     "tailwindcss": "4.1.17",
     "type-fest": "4.41.0",
     "typescript": "5.8.3",
-    "vite": "7.2.4",
+    "vite": "7.2.6",
     "vite-tsconfig-paths": "5.1.4",
-    "wrangler": "4.51.0"
+    "wrangler": "4.53.0"
   },
   "packageManager": "pnpm@10.24.0",
   "engines": {
