@@ -10,9 +10,7 @@ overrides:
   idna-uts46-hx>tr46: '-'
 
 patchedDependencies:
-  hono@4.8.4:
-    hash: f757edf5e503767181bcbd5d03d4f64122a7ce98df26f28c13b368f2089ff581
-    path: patches/hono@4.8.4.patch
+  hono@4.8.4: f757edf5e503767181bcbd5d03d4f64122a7ce98df26f28c13b368f2089ff581
 
 importers:
 
