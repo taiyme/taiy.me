@@ -77,8 +77,8 @@ importers:
         specifier: 2.7.0
         version: 2.7.0
       tailwind-variants:
-        specifier: 1.0.0
-        version: 1.0.0(tailwindcss@4.3.3)
+        specifier: 3.3.1
+        version: 3.3.1(tailwind-merge@3.0.2)(tailwindcss@4.3.3)
       tailwindcss:
         specifier: 4.3.3
         version: 4.3.3
@@ -1548,6 +1548,7 @@ packages:
   eslint@9.39.5:
     resolution: {integrity: sha512-DgZS62aPLXKlnxILS/AYCoRvHaZeXceIzlXPkkGGzJWSow1aEk0lbTlxUSlyjC8jcaKxAdOnTDz+o1JFSBsyjw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
     peerDependencies:
       jiti: '*'
@@ -2355,11 +2356,17 @@ packages:
   tailwind-merge@3.0.2:
     resolution: {integrity: sha512-l7z+OYZ7mu3DTqrL88RiKrKIqO3NcpEO8V/Od04bNpvk0kiIFndGEoqfuzvj4yuhRkHKjRkII2z+KS2HfPcSxw==}
 
-  tailwind-variants@1.0.0:
-    resolution: {integrity: sha512-2WSbv4ulEEyuBKomOunut65D8UZwxrHoRfYnxGcQNnHqlSCp2+B7Yz2W+yrNDrxRodOXtGD/1oCcKGNBnUqMqA==}
-    engines: {node: '>=16.x', pnpm: '>=7.x'}
+  tailwind-variants@3.3.1:
+    resolution: {integrity: sha512-4pAvwUtM4HKBiRZftncAbpn6V9Hhwoa5Fl7O2u5zbp7Z5Cvu+/o/6+176WY3WCEES209543quG8zFIcXCsc5Jw==}
+    engines: {node: '>=16.9.x', pnpm: '>=7.x'}
     peerDependencies:
+      tailwind-merge: '>=3.0.0'
       tailwindcss: '*'
+    peerDependenciesMeta:
+      tailwind-merge:
+        optional: true
+      tailwindcss:
+        optional: true
 
   tailwindcss@4.3.3:
     resolution: {integrity: sha512-gOhV3P7ufE62QDGg1zVaTgCR+EtPv92k2nIhVcVKcLmxT1sUBsQGhnZj175j+MqRt4zLF7ic+sCYjfhxMxj7YQ==}
@@ -4977,10 +4984,11 @@ snapshots:
 
   tailwind-csstree@0.1.4: {}
 
-  tailwind-merge@3.0.2: {}
+  tailwind-merge@3.0.2:
+    optional: true
 
-  tailwind-variants@1.0.0(tailwindcss@4.3.3):
-    dependencies:
+  tailwind-variants@3.3.1(tailwind-merge@3.0.2)(tailwindcss@4.3.3):
+    optionalDependencies:
       tailwind-merge: 3.0.2
       tailwindcss: 4.3.3
 
