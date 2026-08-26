@@ -32,8 +32,8 @@ importers:
         specifier: 1.11.1
         version: 1.11.1(hono@4.8.4(patch_hash=f757edf5e503767181bcbd5d03d4f64122a7ce98df26f28c13b368f2089ff581))
       '@hono/vite-dev-server':
-        specifier: 0.20.0
-        version: 0.20.0(hono@4.8.4(patch_hash=f757edf5e503767181bcbd5d03d4f64122a7ce98df26f28c13b368f2089ff581))(miniflare@4.20260730.0)(wrangler@4.116.0(@cloudflare/workers-types@4.20260702.1))
+        specifier: 0.26.1
+        version: 0.26.1(hono@4.8.4(patch_hash=f757edf5e503767181bcbd5d03d4f64122a7ce98df26f28c13b368f2089ff581))(miniflare@4.20260730.0)(wrangler@4.116.0(@cloudflare/workers-types@4.20260702.1))
       '@tailwindcss/vite':
         specifier: 4.3.3
         version: 4.3.3(vite@7.3.6(@types/node@22.20.1)(jiti@2.7.0)(lightningcss@1.32.0))
@@ -512,6 +512,12 @@ packages:
     resolution: {integrity: sha512-43/qtrDUokr7LJqoF2c3+RInu/t4zfrpYdoSDfYyhg52rwLV6TnOvdG4fXm7IkSB3wErkcmJS9iEhjVtOSEjjA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
+  '@hono/node-server@1.19.17':
+    resolution: {integrity: sha512-dSneS5qhiauZWGDCeK4o695Xd9nUNjviSZCMQrj10eetr8Uln1ucn6bbphOM6UynAMMtNIzZNSpL9vnASJwrPQ==}
+    engines: {node: '>=18.14.1'}
+    peerDependencies:
+      hono: ^4
+
   '@hono/node-server@1.19.5':
     resolution: {integrity: sha512-iBuhh+uaaggeAuf+TftcjZyWh2GEgZcVGXkNtskLVoWaXhnJtC5HLHrU8W1KHDoucqO1MswwglmkWLFyiDn4WQ==}
     engines: {node: '>=18.14.1'}
@@ -537,8 +543,8 @@ packages:
       wrangler:
         optional: true
 
-  '@hono/vite-dev-server@0.20.0':
-    resolution: {integrity: sha512-Qkp9jh4R0q5VnUTBIoaeyh0M6nZWMWPaj5sHa0JJIS3Wu0UPi+Trc5JQTv0tKfYkrnAwOSQXW17pI1815o/5lQ==}
+  '@hono/vite-dev-server@0.26.1':
+    resolution: {integrity: sha512-OlcWoXjNogKiJhVwV/ftMK87UcsJmIBfmImSdI4e8to/ZdwNHrW9ddKw2OGHjXI5/uS2RaZr+2y+l8T9VFbCmw==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       hono: '*'
@@ -1548,6 +1554,7 @@ packages:
   eslint@9.39.5:
     resolution: {integrity: sha512-DgZS62aPLXKlnxILS/AYCoRvHaZeXceIzlXPkkGGzJWSow1aEk0lbTlxUSlyjC8jcaKxAdOnTDz+o1JFSBsyjw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
     peerDependencies:
       jiti: '*'
@@ -2906,6 +2913,10 @@ snapshots:
       '@eslint/core': 0.17.0
       levn: 0.4.1
 
+  '@hono/node-server@1.19.17(hono@4.8.4(patch_hash=f757edf5e503767181bcbd5d03d4f64122a7ce98df26f28c13b368f2089ff581))':
+    dependencies:
+      hono: 4.8.4(patch_hash=f757edf5e503767181bcbd5d03d4f64122a7ce98df26f28c13b368f2089ff581)
+
   '@hono/node-server@1.19.5(hono@4.8.4(patch_hash=f757edf5e503767181bcbd5d03d4f64122a7ce98df26f28c13b368f2089ff581))':
     dependencies:
       hono: 4.8.4(patch_hash=f757edf5e503767181bcbd5d03d4f64122a7ce98df26f28c13b368f2089ff581)
@@ -2923,9 +2934,9 @@ snapshots:
       miniflare: 4.20260730.0
       wrangler: 4.116.0(@cloudflare/workers-types@4.20260702.1)
 
-  '@hono/vite-dev-server@0.20.0(hono@4.8.4(patch_hash=f757edf5e503767181bcbd5d03d4f64122a7ce98df26f28c13b368f2089ff581))(miniflare@4.20260730.0)(wrangler@4.116.0(@cloudflare/workers-types@4.20260702.1))':
+  '@hono/vite-dev-server@0.26.1(hono@4.8.4(patch_hash=f757edf5e503767181bcbd5d03d4f64122a7ce98df26f28c13b368f2089ff581))(miniflare@4.20260730.0)(wrangler@4.116.0(@cloudflare/workers-types@4.20260702.1))':
     dependencies:
-      '@hono/node-server': 1.19.5(hono@4.8.4(patch_hash=f757edf5e503767181bcbd5d03d4f64122a7ce98df26f28c13b368f2089ff581))
+      '@hono/node-server': 1.19.17(hono@4.8.4(patch_hash=f757edf5e503767181bcbd5d03d4f64122a7ce98df26f28c13b368f2089ff581))
       hono: 4.8.4(patch_hash=f757edf5e503767181bcbd5d03d4f64122a7ce98df26f28c13b368f2089ff581)
       minimatch: 9.0.5
     optionalDependencies:
