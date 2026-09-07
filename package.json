@@ -39,7 +39,7 @@
     "jiti": "2.7.0",
     "tailwind-variants": "1.0.0",
     "tailwindcss": "4.3.3",
-    "type-fest": "4.41.0",
+    "type-fest": "5.9.0",
     "typescript": "5.8.3",
     "vite": "7.3.6",
     "vite-tsconfig-paths": "5.1.4",
