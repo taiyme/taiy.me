@@ -1,6 +1,8 @@
 minimumReleaseAge: 10080 # 7 days
 minimumReleaseAgeExclude:
   - '@taiyme/*'
+  # Renovate security update: hono@4.13.5
+  - hono@4.13.5
 
 onlyBuiltDependencies:
   - '@tailwindcss/oxide'
