@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "hono": "4.8.4",
-    "honox": "0.1.43"
+    "honox": "0.1.61"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "4.20260702.1",
