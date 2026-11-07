@@ -3,6 +3,8 @@ minimumReleaseAgeExclude:
   - '@taiyme/*'
   # Renovate security update: vite@7.3.7
   - vite@7.3.7
+  # Renovate security update: pnpm@10.34.5
+  - pnpm@10.34.5
 
 onlyBuiltDependencies:
   - '@tailwindcss/oxide'
